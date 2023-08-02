@@ -1,0 +1,32 @@
+.WhiteCover
+{
+    background-color: white;
+    padding: 2rem;
+    margin-top: -3rem;
+}
+.Pathway
+{
+    background-color: #d3f3ef;
+}
+.PathwayContainer
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #d3f3ef;
+} 
+.PathWayDiv
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgb(229, 85, 85);
+}
+.PathWayDiv p
+{
+    font-family: 'Nunito', sans-serif;;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    margin: 0.5rem;
+}

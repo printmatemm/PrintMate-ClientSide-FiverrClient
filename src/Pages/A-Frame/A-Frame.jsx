@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Navigation from '../../Components/Navigation/Navigation'
 import Footer from '../../Components/Navigation/Footer'
 import './styles.modules.css'
-import { useHistory } from 'react-router-dom';
+import Context from '../../Context/Context'
+import { useNavigate } from 'react-router-dom/dist'
 
 export default function AFrame() {  
   const Products = {
@@ -14,7 +15,22 @@ export default function AFrame() {
         "Double sided",
         "Includes 2 x A1 posters",
         "Includes 2 x clear protective covers"
+      ],
+      SecondaryImages:
+      [
+        "/AFrames/AFrame-Product1-1.png",
+        "/AFrames/AFrame-Product1-2.png",
+        "/AFrames/AFrame-Product1-3.png",
+        "/AFrames/AFrame-Product1-4.png",
+      ],
+      InnerDescription:
+      [
+        "Brushed aluminium stand is lightweight for easy transportation",
+        "Grab attention with two A1 PVC posters of the same artwork",
+        "Easy-to-replace graphics for that freshly printed look",
+        "We have printed over 330,000 poster orders to date!",
       ]
+
     },
     A2: {
       Image: "/AFrames/AFrame-Product2.png",
@@ -63,7 +79,7 @@ export default function AFrame() {
         </div>
         <div className="container AProductsDisplay-Inner">
           {Object.keys(Products).map((key) => {
-            return <Product Image={Products[key].Image} Description={Products[key].Description} List={Products[key].List} />
+            return <Product TempProduct={Products[key]} />
           }
           )}
 
@@ -99,21 +115,24 @@ export default function AFrame() {
 
 
 const Product = (props) => { 
-  const history = useHistory()
-  const handleClick = () => {
-    history.push('/A-Frame/Product' , {Product,props})
-  }
 
+  const ProductContext = useContext(Context);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    ProductContext.SetProduct(props.TempProduct)
+    navigate('/A-Frame/Product')
+  };
   return(
         <>
           <div className="AProductsDisplay-1">
             <div className="AProduct-Image">
-              <img src={props.Image} alt="AFrame" />
+              <img src={props.TempProduct.Image} alt="AFrame" />
             </div>
             <div className='AProduct-Description'>
-              <h5>{props.Description}</h5>
+              <h5>{props.TempProduct.Description}</h5>
               <ul>
-                {props.List.map((item) => {
+                {props.TempProduct.List.map((item) => {
                   return <li>{item}</li>
                 })}
               </ul>
