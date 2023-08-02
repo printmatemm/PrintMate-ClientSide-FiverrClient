@@ -55,9 +55,6 @@ export default function LandingPage() {
             </div>
         </div>
 
-
-
-
             <div className="Landing-Page-Cover">
                 <img src='/Cover.png' />
             </div>

@@ -13,7 +13,7 @@
     background-color:#d3f3ef;
     z-index: -1;
     padding: 1rem;
-    padding-top: 3rem;
+    padding-top: 5rem;
 }
 .AFramePT1
 {
@@ -32,21 +32,36 @@
 .AFramePT1 p
 {
     font-family: 'Nunito', sans-serif;;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     color: rgb(0, 0, 0);
     margin-top: 1rem;
     text-align: justify;
 }
+
 .AFramePT2
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
-.AFramePT3{
+.Cover-Sidebar-Image-Container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 90%;
+}
+.Cover-Sidebar-Image-Container img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.AFramePT3
+{
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -110,9 +125,11 @@
     background-color: white;
     margin: 1rem;
     border-radius: 0.2rem;
+    border: 1px solid #d3f3ef;
     box-shadow: 0px 2px 23px 0px #d3f3ef;
     -webkit-box-shadow: 0px 2px 23px 0px #d3f3ef;
     -moz-box-shadow: 0px 2px 23px 0px #d3f3ef;
+    margin-bottom: 1rem !important;
 }
 .AProduct-Image
 {
@@ -137,7 +154,7 @@
 }
 .AProduct-Description h5
 {
-    font-family: 'Nunito', sans-serif;;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
     color: rgb(0, 0, 0);
@@ -146,10 +163,11 @@
 }
 .AProduct-Description ul
 {
-    font-family: 'Nunito', sans-serif;;
+    list-style:disc;
+    font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    color: rgb(0, 0, 0);
+    color: rgb(54, 54, 54);
     margin-top: -0.8rem;
     text-align: left;
 }
@@ -159,6 +177,7 @@
     justify-content: center;
     padding: 1rem;
     padding-top: 0;
+    padding-bottom: 0;
 }
 .View-Product button
 {
@@ -173,7 +192,7 @@
     font-family: 'Nunito', sans-serif;;
     font-size: 1rem;
     font-weight: 400;
-    margin-top: 0.5rem;
+    margin-bottom: 1rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }

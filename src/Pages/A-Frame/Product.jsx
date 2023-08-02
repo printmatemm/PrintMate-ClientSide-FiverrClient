@@ -3,9 +3,19 @@ import Navigation from '../../Components/Navigation/Navigation'
 import Context from '../../Context/Context'
 import './product.modules.css'
 import Pathway from '../../Components/ProductBar/Pathway'
+import Footer from '../../Components/Navigation/Footer'
 
 export default function () {
     const Product = useContext(Context).Product;
+
+    useEffect(() => {
+        if (!Product)
+        {
+            window.location.href = "/";
+        }
+    }, [Product])
+
+
 
     const ChangeProductImage = (image,index) => {
         document.getElementById("MainImage").src = image;
@@ -35,6 +45,7 @@ export default function () {
 
     return (
         <>
+        {Product && <>
             <Navigation />
             <Pathway />
 
@@ -49,7 +60,8 @@ export default function () {
                             )}
                         </div>
                         <div className="MainImage">
-                            <img src={Product?.SecondaryImages[0]} alt="AFrame" id="MainImage" />
+                            <img src={Product?.SecondaryImages?.[0]} alt="AFrame" id="MainImage" />
+
                         </div>
                     </div>
                     <div className="ShowcasePT2">
@@ -62,7 +74,9 @@ export default function () {
                 </div>
             </div>
 
-
+        
+            <Footer />
+            </>}
 
         </>
     )

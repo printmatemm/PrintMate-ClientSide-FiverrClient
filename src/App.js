@@ -12,7 +12,7 @@ function App() {
         <BrowserRouter>
           <Routes>      
             <Route path="/" element={<LandingPage/>} />
-            <Route path="/a-frame" element={<AFrame/>} />
+            <Route path="/Product/:ServiceName" element={<AFrame/>} />
             <Route path="/A-Frame/Product" element={<AFrameProduct/>} />
           </Routes>
         </BrowserRouter>
