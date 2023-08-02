@@ -1,0 +1,599 @@
+.Company-Name {
+    font-family: 'Rubik';
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: rgb(229, 85, 85);
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.Company-Name span {
+    color: #7cd2c7;
+}
+.Navigation-Wrapper
+{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.Navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.Navigation-Inner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Navigation-Icons {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+}
+#Icon
+{
+    font-size: 2rem;
+    object-fit: cover;
+    margin-right: 0.5rem;
+    color: rgb(229, 85, 85);
+}
+.Navigation-Icons-Text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    line-height: 0.5;
+    margin-top: 0.7rem;
+}
+
+.Navigation-Button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgb(226, 98, 98);
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 1s ease-in;
+}
+.Navigation-Button:hover
+{
+    background-color: transparent;
+    border: 1px solid #3bafb3;
+    color: #3bafb3;
+}
+
+
+.Navigation-Down {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7cd2c7;
+    box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-top: -1rem;
+}
+
+.Navigation-Inner-Down {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.3rem;
+}
+
+.Navigation-Inner-Down h6 {
+    font-family: 'Nunito';
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition-duration: 1s ease-in;
+}
+
+.Navigation-Inner-Down h6:hover {
+    color: #3bafb3;
+}
+
+
+.Landing-Page-Cover {
+    margin-top: -3rem;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Landing-Page-Cover img {
+    width: 120%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.Landing-Page-Cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Landing-Page-Cover .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#carousel {
+    position: relative;
+    display: grid !important;
+    grid-template-columns: 20% 80%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.carousel-section1 {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.carousel-section1 h1 {
+    transform-origin: 50% 50%;
+    transform: translateX(-50%) rotateZ(-90deg);
+    font-size: 6rem;
+    font-family: 'Rubik';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: 0;
+    color: white;
+}
+
+.carousel-section2 {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.carousel-section2 h2{
+    font-family: 'Rubik';
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
+    text-align: left;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-section2 p {
+    text-align: left;
+    font-size: 1.5rem;
+    color: rgb(95, 95, 95);
+}
+
+.carousel-section2 ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    font-family: 'Nunito';
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-right: 2rem;
+}
+.carousel-section2 li {
+    width: 60%;
+    border: 2px solid #7cd2c7;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+.carousel-section2 li:hover {
+    background-color: #7cd2c7;
+    color: #fff;
+    border: 2px solid #7cd2c7;
+}
+
+.carousel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.carousel-btn button {
+    font-size: 1.2rem;
+    width: 50%;
+    background-color: #3bafb3;
+    color: #fff;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    transition-duration: 1s ease-in;
+    margin-bottom: 1rem;
+}
+
+.carousel-btn button:hover {
+    border: 1px solid #3bafb3;
+    background-color: transparent;
+    color: #3bafb3;
+}
+
+
+.ourselves {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    margin-top: -1rem;
+}
+
+.ourselves-inner {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.ourselves-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.ourselves-top h4 {
+    font-family: 'Nunito';
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.ourselves-top-p {
+    font-family: 'Nunito';
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: left;
+    border-left: 1px solid #3bafb3;
+    padding-left: 0.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.grid-1 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+}
+.grid-1 img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.grid-1div {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    top: 91%;
+    left: 50%;
+    width: 100%;
+    height: 20%;
+    transition-duration: 1s;
+    padding: 1rem;
+}
+.grid-1div:hover{
+    top: 75%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+}
+
+.grid-1 h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+.grid-1 h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: right;
+}
+
+.grid-1div p{
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+}
+.Grid-Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+.about-us
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: -1rem;
+}
+.about-us-1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.about-us-2
+{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: left;
+}
+.about-us-2 h2
+{
+    font-family: 'Rubik';
+    font-size: 2rem;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
+    text-align: left;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+.about-us-2 p
+{
+    font-family: 'Nunito';
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
+    text-align: justify;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+.aboutus-div
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    border: 1px solid #B7D6D2;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition-duration: 1s ease-in;
+    color: black;
+}
+.aboutus-div:hover
+{
+    background-color: transparent;
+    color: #7cd2c7;
+    border: 1px solid #7cd2c7;
+}
+.about-btn
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+.about-btn button
+{
+    font-size: 1.2rem;
+    width: 30%;
+    background-color: #7cd2c7;
+    color: #fff;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    transition-duration: 1s ease-in;
+    margin-bottom: 1rem;
+}
+.about-btn button:hover
+{
+    border: 1px solid #7cd2c7;
+    background-color: transparent;
+    color: #7cd2c7;
+}
+.footer
+{
+    background-color: #fff;
+}
+.footer-inner
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition-duration: 1s ease-in;
+    color: black;
+}
+.footer-1 {
+    flex: 1;
+    text-align: left;
+    padding: 1rem;
+    margin-top: 0.5rem;
+
+}
+
+.footer-1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-1 p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-1 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-1 li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+
+}
+.footer-1 button {
+    font-size: 1.2rem;
+    width: 50%;
+    background-color: #7cd2c7;
+    color: #fff;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    transition-duration: 1s ease-in;
+}
+.footer-end
+{
+    width: 100%;
+    background-color:#7cd2c7
+}
+.footer-end-inner
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 1s ease-in;
+    color: black;
+}
+.footer-end-inner h6
+{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.footer-end-inner p
+{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.footer-icons-container
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 1s ease-in;
+    color: black;
+}
+.footer-icon
+{
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #fff;
+}
