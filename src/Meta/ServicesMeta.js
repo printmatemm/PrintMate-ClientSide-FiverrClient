@@ -48,7 +48,7 @@ const ServicesMeta = [
             {
                 Question: "What Size Are Business Cards?",
                 Answers: [
-                    "Here’s a rundown of the business card sizes we have at instantprint:",
+                    "Here’s a rundown of the business card sizes we have at PrintMate:",
                     "🔹Standard – 85mm x 55mm",                    
                     "🔹Square – 55mm x 55mm",                    
                     "🔹Mini – 85mm x 25mm",                    
@@ -148,7 +148,7 @@ const ServicesMeta = [
     {
         ID: "Flyers",
         Name: "Flyers Printing",
-        CoverDescription: "Whether you want to promote your new restaurant or new yoga class, business flyers and leaflets are a fantastic way to get your message out there. Our range of products come in 12 different styles and sizes, so you’re sure to find what you’re looking for. Here at instantprint, we can provide you with eye-catching flyer and leaflet printing templates to support your brand messaging and help you stand out from the competition. We also have a wide range of folded leaflet designs, just in case you need a bit of extra room for your message.",
+        CoverDescription: "Whether you want to promote your new restaurant or new yoga class, business flyers and leaflets are a fantastic way to get your message out there. Our range of products come in 12 different styles and sizes, so you’re sure to find what you’re looking for. Here at PrintMate, we can provide you with eye-catching flyer and leaflet printing templates to support your brand messaging and help you stand out from the competition. We also have a wide range of folded leaflet designs, just in case you need a bit of extra room for your message.",
         CoverImage: "/Flyers/Flyer-Cover.png",
         CoverImageAlt: "Flyers Printing",
         ProductID: "Flyer-Products",
@@ -172,6 +172,45 @@ const ServicesMeta = [
         ProductID: "FoldedLeaflet-Products",
         Tags: "From wide range of Leaflets, get the right look for your next Folded Leaflet.",
     },
+    {
+        ID: "Menus",
+        Name: "Menus Printing",
+        CoverDescription: "Effortlessly Create and Print Stunning Menus Online for Your Restaurant, Takeaway, or Café! Elevate the appeal of your eatery with our seamless and budget-friendly online menu printing services. Whether you're seeking cost-effective options for mailing takeaway menus or aiming to leave a lasting impression on your diners, we have the perfect solutions tailored to your needs. Explore a variety of exquisite paper stocks that align with your budget, and for an added touch of sophistication, consider enhancing your menus with lamination effects. Your delectable dishes deserve nothing less than an outstanding presentation!",
+        CoverImage: "/Menus/Menus-Cover.png",
+        CoverImageAlt: "Menus Printing",
+        ProductID: "Menu-Products",
+        Tags: "From wide range of Menus, get the right look for your next Menu.",
+    },
+    {
+        ID: "Merchandise",
+        Name: "Merchandise Printing",
+        CoverDescription: "Unlock Your Brand's Potential with Custom Printed Merchandise from PrintMate, Incorporate your unique brand identity into a diverse range of promotional products through PrintMate's top-notch printed merchandise services. Whether you're in search of tailor-made printed mugs or personalized tote bags, our platform offers a dynamic way to showcase your brand while providing customers with functional and appealing items. These branded merchandise pieces serve as effective marketing tools, allowing your business to gain exposure and recognition.",
+        CoverImage: "/Merchandise/Merchendise-Cover.png",
+        CoverImageAlt: "Merchendise Printing",
+        ProductID: "Merchandise-Products",
+        Tags: "From wide range of Merchandise, get the right look for your next Merchandise.",
+    },
+    {
+        ID: "Perforation",
+        Name: "Perforation Printing",
+        CoverDescription: "Perforation is a process that creates a line of small holes in paper or card.It’s a great way to add tear-off sections to your print, such as vouchers, tickets, or forms. It’s also a great way to add a unique look to your print. It’s also highly effective for folding thicker paper stocks as the holes make it easier to fold straight with zero paper cracks.",
+        CoverImage: "/Perforation/Perforation-Cover.png",
+        CoverImageAlt: "Perforation Printing",
+        ProductID: "Perforation-Products",
+        Tags: "From wide range of Perforation, get the right look for your next Perforation.",
+    },
+    {
+        ID: "Posters",
+        Name: "Posters Printing",
+        CoverDescription: "Are you looking for a powerful way to convey your marketing messages? Custom posters might be your secret weapon! These dynamic visuals not only catch the eye but also leave a lasting impression on your audience. At [Your Business Name], we specialize in creating personalized poster designs that captivate attention and effectively communicate your brand's unique story.",
+        CoverImage: "/Posters/Posters-Cover.png",
+        CoverImageAlt: "Posters Printing",
+        ProductID: "Poster-Products",
+        Tags: "From wide range of Posters, get the right look for your next Poster.",
+    }
+
+        
+
 
 
 
