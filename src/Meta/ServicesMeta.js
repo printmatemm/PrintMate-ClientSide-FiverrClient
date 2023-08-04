@@ -207,6 +207,16 @@ const ServicesMeta = [
         CoverImageAlt: "Posters Printing",
         ProductID: "Poster-Products",
         Tags: "From wide range of Posters, get the right look for your next Poster.",
+    },
+    {
+        ID: "Stickers-and-Labels",
+        Name: "Stickers and Labels Printing",
+        CoverDescription: "Are you ready to make your brand stand out? Discover the power of personalized business stickers and labels to elevate your brand's recognition and add a touch of professionalism to your products and packaging. At PrintMate, we offer a diverse range of self-adhesive labels and custom stickers, available in two distinct styles: small logo stickers and window stickers. Unleash your creativity with our user-friendly online sticker design feature, allowing you to craft unique designs that align perfectly with your brand identity.",
+        CoverImage: "/Stickers/Stickers-Cover.png",
+        CoverImageAlt: "Stickers and Labels Printing",
+        ProductID: "Sticker-Products",
+        Tags: "From wide range of Stickers and Labels, get the right look for your next Sticker or Label.",
+        
     }
 
         
