@@ -1135,7 +1135,445 @@ const ProductMeta = [
                 ]
             },
         }
+    },
+    {
+        ID: "Flyer-Products",
+        Products: {
+            A1: {
+                Image: "/Flyers/Flyers-Product1.jpg",
+                Description: "Slim A4 Flyers & Leaflets",
+                List: [
+                    "105mm x 297mm",
+                    "Choice of laminations",
+                    "Choice of paper stocks"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product1/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product1/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product1/Flyers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "105mm x 297mm",
+                    "Choice of laminations",
+                    "Choice of paper stocks",
+                    "Single or double sided",
+                ]
+            },
+            A2: {
+                Image: "/Flyers/Flyers-Product2.jpg",
+                Description: "A5 Slim Flyers & Leaflets",
+                List: [
+                    "74mm x 210mm",
+                    "Choice of laminations",
+                    "Choice of paper stocks"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product2/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product2/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product2/Flyers-Product1-3.jpg",
+                    "/Flyers/Flyers-Product2/Flyers-Product1-4.jpg",
+                ],
+                InnerDescription:
+                [
+                    "74mm x 210mm",
+                    "Choice of laminations",
+                    "Choice of paper stocks",
+                    "Single or double sided",
+                ]
+            },
+            A3: {
+                Image: "/Flyers/Flyers-Product3.jpg",
+                Description: "210mm Flyers & Leaflets",
+                List: [
+                    "210mm x 210mm",
+                    "Choice of laminations",
+                    "Choice from 13 paper stocks"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product3/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product3/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product3/Flyers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "210mm x 210mm",
+                    "Choice of laminations",
+                    "Choice from 13 paper stocks",
+                    "Single or double sided",
+                ]
+            },
+            A4: {
+                Image: "/Flyers/Flyers-Product4.jpg",
+                Description: "148mm Flyers & Leaflets",
+                List: [
+                    "148mm x 148mm",
+                    "Choice of laminations",
+                    "Choice from 13 paper stocks"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product4/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product4/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product4/Flyers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "148mm x 148mm",
+                    "Choice of laminations",
+                    "Choice from 13 paper stocks",
+                    "Single or double sided",
+                ]
+            },
+            A5: {
+                Image: "/Flyers/Flyers-Product5.jpg",
+                Description: "DL Flyers & Leaflets ",
+                List: [
+                    "DL Size: 99mm x 210mm",
+                    "Foiling and spot UV available",
+                    "Choose from 13 paper stocks"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product5/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product5/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product5/Flyers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "DL Size: 99mm x 210mm",
+                    "Foiling and spot UV available",
+                    "Choose from 13 paper stocks",
+                    "Single or double sided",
+                ]
+            },
+            A6: {
+                Image: "/Flyers/Flyers-Product6.jpg",
+                Description: "A3 Flyers & Leaflets",
+                List: [
+                    "A3 Size: 297mm x 420mm",
+                    "Choice of laminations",
+                    "Choice from 13 paper stocks"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product6/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product6/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product6/Flyers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "A3 Size: 297mm x 420mm",
+                    "Choice of laminations",
+                    "Choice from 13 paper stocks",
+                    "Single or double sided",
+                ]
+            },
+            A7: {
+                Image: "/Flyers/Flyers-Product7.jpg",
+                Description: "A4 Flyers & Leaflets",
+                List: [
+                    "A4 Size: 210mm x 297mm",
+                    "Choice of laminations",
+                    "Choice of Foils",
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product7/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product7/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product7/Flyers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "A4 Size: 210mm x 297mm",
+                    "Choice of laminations",
+                    "Choice of Foils",
+                    "Single or double sided",
+                ]
+            },
+            A8: {
+                Image: "/Flyers/Flyers-Product8.jpg",
+                Description: "A5 Flyers & Leaflets",
+                List: [
+                    "A5 Size: 148mm x 210mm",
+                    "Choice of laminations",
+                    "Choice of Paper Stocks"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product8/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product8/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product8/Flyers-Product1-3.jpg",
+                    "/Flyers/Flyers-Product8/Flyers-Product1-4.jpg",
+                ],
+                InnerDescription:
+                [
+                    "A5 Size: 148mm x 210mm",
+                    "Choice of laminations",
+                    "Choice of Paper Stocks",
+                    "Single or double sided",
+                ]
+            },
+            A9:
+            {
+                Image: "/Flyers/Flyers-Product9.jpg",
+                Description: "A6 Flyers & Leaflets",
+                List: [
+                    "A6 Size: 105mm x 148mm",
+                    "Choice of laminations",
+                    "Choice of Paper Stocks"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product9/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product9/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product9/Flyers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "A6 Size: 105mm x 148mm",
+                    "Choice of laminations",
+                    "Choice of Paper Stocks",
+                    "Single or double sided",
+                ]
+            },
+            A10:
+            {
+                Image: "/Flyers/Flyers-Product10.jpg",
+                Description: "A7 Flyers & Leaflets",
+                List: [
+                    "A7 Size: 74mm x 105mm",
+                    "Choice of laminations",
+                    "Value for money"
+                ],
+                SecondaryImages:
+                [
+                    "/Flyers/Flyers-Product10/Flyers-Product1-1.jpg",
+                    "/Flyers/Flyers-Product10/Flyers-Product1-2.jpg",
+                    "/Flyers/Flyers-Product10/Flyers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "A7 Size: 74mm x 105mm",
+                    "Choice of laminations",
+                    "Value for money",
+                    "Single or double sided",
+                ]
+            },                
+        }
+    },
+    {
+        ID: "Foil-Products",
+        Products: {
+            A1: {
+                Image: "/Foil/Foil-Product1.jpg",
+                Description: "Foil Business Cards",
+                List: [
+                    "85mm x 55mm",
+                    "Thick 450gsm silk stock",
+                    "Soft-touch matt lamination",
+                ],
+                SecondaryImages:
+                [
+                    "/Foil/Foil-Product1/Foil-Product1.jpg",
+                    "/Foil/Foil-Product1/Foil-Product2.jpg",
+                    "/Foil/Foil-Product1/Foil-Product3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "85mm x 55mm",
+                    "Thick 450gsm silk stock",
+                    "Soft-touch matt lamination",
+                    "Single or double sided",
+                ]
+            },
+            A2: {
+                Image: "/Foil/Foil-Product2.jpg",
+                Description: "Flyers",
+                List: [
+                    "Variety of sizes",
+                    "250gsm or 350gsm",
+                    "Choice of laminations"
+                ],
+                SecondaryImages:
+                [
+                    "/Foil/Foil-Product2/Foil-Product1-1.jpg",
+                    "/Foil/Foil-Product2/Foil-Product1-2.jpg",
+                    "/Foil/Foil-Product2/Foil-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "Variety of sizes",
+                    "250gsm or super-thick 350gsm",
+                    "Choice of laminations",
+                    "Quick delivery",
+                ]
+            },
+            A3: {
+                Image: "/Foil/Foil-Product3.jpg",
+                Description: "Stapled Booklets",
+                List: [
+                    "Variety of sizes",
+                    "Foiling Available",
+                    "Choice of laminations"
+                ],
+                SecondaryImages:
+                [
+                    "/Foil/Foil-Product3/Foil-Product1-1.jpg",
+                    "/Foil/Foil-Product3/Foil-Product1-2.jpg",
+                    "/Foil/Foil-Product3/Foil-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "Variety of sizes",
+                    "Foiling Available",
+                    "Choice of laminations",
+                ]
+            },
+            A4: {
+                Image: "/Foil/Foil-Product4.jpg",
+                Description: "Foil Greatings",
+                List: [
+                    "3 Range of sizes",
+                    "Foiling Available",
+                    "Premium touch"
+                ],
+                SecondaryImages:
+                [
+                    "/Foil/Foil-Product4/Foil-Product1-1.jpg",
+                    "/Foil/Foil-Product4/Foil-Product1-2.jpg",
+                    "/Foil/Foil-Product4/Foil-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "3 Range of sizes",
+                    "Foiling Available",
+                    "Premium touch",
+                ]
+            },
+            A5: {
+                Image: "/Foil/Foil-Product5.jpg",
+                Description: "Foil Leaflets",
+                List: [
+                    "5 Range of sizes",
+                    "Spot UV Available",
+                    "Choice of laminations"
+                ],
+                SecondaryImages:
+                [
+                    "/Foil/Foil-Product5/Foil-Product1-1.jpg",
+                    "/Foil/Foil-Product5/Foil-Product1-2.jpg",
+                    "/Foil/Foil-Product5/Foil-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "5 Range of sizes",
+                    "Spot UV Available",
+                    "Choice of laminations",
+                    "Quick delivery",
+                ]
+            },
+            A6: {
+                Image: "/Foil/Foil-Product6.jpg",
+                Description: "Foil Invitations",
+                List: [
+                    "For Weddings and Party Invites",
+                    "Gold, Silver, and Copper",
+                    "Envelopes included",
+                ],
+                SecondaryImages:
+                [
+                    "/Foil/Foil-Product6/Foil-Product1-1.jpg",
+                    "/Foil/Foil-Product6/Foil-Product1-2.jpg",
+                    "/Foil/Foil-Product6/Foil-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "For Weddings and Party Invites",
+                    "Gold, Silver, and Copper",
+                    "Envelopes included",
+                    "Quick delivery",
+                ]
+            },
+            A7: {
+                Image: "/Foil/Foil-Product7.jpg",
+                Description: "Presentation Folders",
+                List: [
+                    "Available in A4 & A5 sizes",
+                    "Thick 350gsm silk",
+                    "Add foiling"
+                ],
+                SecondaryImages:
+                [
+                    "/Foil/Foil-Product7/Foil-Product1-1.jpg",
+                    "/Foil/Foil-Product7/Foil-Product1-2.jpg",
+                    "/Foil/Foil-Product7/Foil-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "Available in A4 & A5 sizes",
+                    "Thick 350gsm silk",
+                    "Add foiling",
+                    "Quick delivery",
+                ]
+            },
+            A8: {
+                Image: "/Foil/Foil-Product8.jpg",
+                Description: "Foil Christmas Cards",
+                List: [
+                    "Available in A4 & A5 sizes",
+                    "Thick 350gsm silk",
+                    "Add foiling"
+                ],
+                SecondaryImages:
+                [
+                    "/Foil/Foil-Product8/Foil-Product1-1.jpg",
+                    "/Foil/Foil-Product8/Foil-Product1-2.png",
+                    "/Foil/Foil-Product8/Foil-Product1-3.png",
+                ],
+                InnerDescription:
+                [
+                    "Available in A4 & A5 sizes",
+                    "Thick 350gsm silk",
+                    "Add foiling",
+                    "Quick delivery",
+                ]
+            },
+        }
+    },
+    {
+        ID: "FoldedLeaflet-Products",
+        Products: {
+            A1: {
+                Image: "/FoldedLeaflet/FoldedLeaflets-Product1.jpg",
+                Description: "Half Folded Leaflets",
+                List: [
+                    "Unique custom brochure",
+                    "Folds in middle",
+                    "Affordable flyer printing"
+                ],
+                SecondaryImages:
+                [
+                    "/FoldedLeaflet/FoldedLeaflets-Product1/FoldedLeaflets-Product1-1.jpg",
+                    "/FoldedLeaflet/FoldedLeaflets-Product1/FoldedLeaflets-Product1-2.jpg",
+                    "/FoldedLeaflet/FoldedLeaflets-Product1/FoldedLeaflets-Product1-3.jpg",
+                    "/FoldedLeaflet/FoldedLeaflets-Product1/FoldedLeaflets-Product1-4.jpg",
+                ],
+                InnerDescription:
+                [
+                    "Unique custom brochure",
+                    "Folds in middle",
+                    "Affordable flyer printing",
+                    "Great bar menus and advertising flyers"
+                ]
+            },
     }
+                    
+
+
 ]
 
 export default ProductMeta;

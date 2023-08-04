@@ -144,7 +144,38 @@ const ServicesMeta = [
         CoverImageAlt: "Business Stationery Printing",
         ProductID: "BusinessStationery-Products",
         Tags: "From Letterheads to Compliment Slips, get the right look for your next Business Stationery.",
-    }
+    },
+    {
+        ID: "Flyers",
+        Name: "Flyers Printing",
+        CoverDescription: "Whether you want to promote your new restaurant or new yoga class, business flyers and leaflets are a fantastic way to get your message out there. Our range of products come in 12 different styles and sizes, so you’re sure to find what you’re looking for. Here at instantprint, we can provide you with eye-catching flyer and leaflet printing templates to support your brand messaging and help you stand out from the competition. We also have a wide range of folded leaflet designs, just in case you need a bit of extra room for your message.",
+        CoverImage: "/Flyers/Flyer-Cover.png",
+        CoverImageAlt: "Flyers Printing",
+        ProductID: "Flyer-Products",
+        Tags: "We offer wide range of flyer sizes, get the right look for your next Flyer.",
+    },
+    {
+        ID: "Foils",
+        Name: "Foils Printing",
+        CoverDescription: "For luxury print, look no further than our foil printing range, available in gold, silver, copper, red, green, blue and holographic. Perfect for adding a metallic finish to select parts of your design for eye-catching and memorable print. Available on our most popular print options including premium business cards, flyers and booklets. We cure your metallic foiling on top of a layer of spot UV gloss, making for a smooth, high-precision finish. Our foil stamping services offer undeniably the best way to create one-of-a-kind print that makes your business look incredible.",
+        CoverImage: "/Foil/Foil-Cover.png",
+        CoverImageAlt: "Foils Printing",
+        ProductID: "Foil-Products",
+        Tags: "From Business Cards to Flyers, get the right look for your next Foil.",
+    },
+    {
+        ID: "Folded-Leaflets",
+        Name: "Folded Leaflets Printing",
+        CoverDescription: "Folded leaflets are a great way to present lots of information in an easily accessible format. They’re ideal for price lists, menus, brochures, and other marketing materials. We offer a wide range of sizes and paper types, so you’re sure to find the right folded leaflet for your business.",
+        CoverImage: "/FoldedLeaflets/FoldedLeaflets-Cover.png",
+        CoverImageAlt: "Folded Leaflets Printing",
+        ProductID: "FoldedLeaflet-Products",
+        Tags: "From wide range of Leaflets, get the right look for your next Folded Leaflet.",
+    },
+
+
+
+
 
 
 
