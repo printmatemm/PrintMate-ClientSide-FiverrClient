@@ -1,6 +1,13 @@
 .ShowcaseWrapper {
-    background-color: white;
     padding: 2.5rem;
+    background: url('/public/Cover2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #d3f3ef;
+    width: 100%;
+    
 }
 
 .Showcase {
@@ -12,25 +19,13 @@
     border: 1px solid #d3f3ef;
     border-radius: 5px;
     box-shadow: 0px 2px 23px 0px rgb(0, 0, 0, 0.2);
+    height: fit-content;
 }
 
 .ShowcasePT1 {
     display: flex;
     flex-direction: column;
 
-}
-
-.MainImage {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.MainImage img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
 }
 
 .SideImages {
@@ -47,15 +42,29 @@
     margin-bottom: 0.5rem;
     border-radius: 5px;
 }
+.RoadMapImageHolder
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
 
 .ShowcasePT1 {
     margin: 1rem;
     text-align: left;
+    height: fit-content;
 }
 .ShowcasePT2
 {
     margin: 1rem;
     text-align: left;
+    color: rgb(229, 85, 85);
 }
 
 
@@ -275,10 +284,9 @@
     background-color: #3bafb3;
     color: white;
     border: none;
-    padding: 0.2rem;
+    padding: 0.4rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    border-radius: 0.2rem;
     font-family: 'Nunito', sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -286,6 +294,7 @@
     cursor: pointer;
     transition: 0.3s ease-in-out;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .RequestQuote:hover {
@@ -445,5 +454,42 @@
     width: 2rem;
     height: 2rem;
 }
+.ImagesWrapper
+{
 
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.ProductSideImages
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ProductSideImages img
+{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+#MainImage {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d3f3ef;
+    border-radius: 5px;
+}
 
+#MainImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
