@@ -597,3 +597,18 @@
     margin-right: 0.5rem;
     color: #fff;
 }
+.Dropdown
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 1s ease-in;
+    color: black;
+    width: 100%;
+    margin-top: 0.5rem;
+}

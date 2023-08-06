@@ -1,51 +1,449 @@
-.ShowcaseWrapper
-{
+.ShowcaseWrapper {
     background-color: white;
+    padding: 2.5rem;
 }
-.Showcase
-{
+
+.Showcase {
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
-    padding-top: 3rem;
+    padding-top: 1rem;
+    border: 1px solid #d3f3ef;
+    border-radius: 5px;
+    box-shadow: 0px 2px 23px 0px rgb(0, 0, 0, 0.2);
 }
-.ShowcasePT1
-{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    gap: 0.5rem;
-    background-color: white;
-    margin: 1rem;
+
+.ShowcasePT1 {
+    display: flex;
+    flex-direction: column;
+
 }
-.MainImage
-{
+
+.MainImage {
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.MainImage img
-{
+
+.MainImage img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    box-shadow: 0px 2px 23px 0px rgb(0,0,0,0.2);
 }
-.SideImages
-{
+
+.SideImages {
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.SideImages img
-{
+
+.SideImages img {
     width: 100%;
     height: 50%;
     object-fit: cover;
     margin-bottom: 0.5rem;
     border-radius: 5px;
-    box-shadow: 0px 2px 23px 0px rgb(0,0,0,0.2);
 }
+
+.ShowcasePT1 {
+    margin: 1rem;
+    text-align: left;
+}
+.ShowcasePT2
+{
+    margin: 1rem;
+    text-align: left;
+}
+
+
+.ShowcasePT1 h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.DescriptionDiv {
+    display: flex;
+    gap: 1rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(54, 54, 54);
+    text-align: left;
+    margin-bottom: -0.7rem;
+}
+
+.AFrameForm-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #7CD2C7;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.Quantity-Input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.AFrameForm-1-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+
+.radio-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+    margin-left: -1.8rem;
+
+}
+
+.radio-inputs>* {
+    margin: 6px;
+}
+
+.radio-input:checked+.radio-tile {
+    background-color: #7CD2C7;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.radio-input:checked+.radio-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #7CD2C7;
+    color: white;
+}
+
+
+.radio-input:checked+.radio-tile .radio-label {
+    color: white;
+}
+
+.radio-input:focus+.radio-tile {
+    background-color: #7CD2C7;
+    border-color: white;
+    color: white;
+}
+
+.radio-input:focus+.radio-tile:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    min-height: 80px;
+    border: 2px solid #7CD2C7;
+    background-color: #fff;
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-tile:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
+}
+
+.radio-tile:hover {
+    border-color: #7CD2C7;
+}
+
+.radio-tile:hover:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.radio-icon svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #494949;
+}
+
+.radio-label {
+    color: black;
+    transition: 0.375s ease;
+    text-align: center;
+    font-size: 13px;
+}
+
+.radio-input {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.radio-icons {
+    width: 2rem;
+    height: 2rem;
+}
+
+.radio-icons-2 {
+    width: 8rem;
+    height: 8rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.Select {
+    width: 100%;
+    border: 1px solid #7CD2C7;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+
+.Select option[disabled] {
+    display: none;
+}
+
+.Select option {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(54, 54, 54);
+    text-align: left;
+}
+
+.AFrameForm-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.AFrameForm-2 input {
+    width: 100%;
+    border: 1px solid #7CD2C7;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+
+.RequestQuote {
+    width: 100%;
+    background-color: #3bafb3;
+    color: white;
+    border: none;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.RequestQuote:hover {
+    background-color: rgb(229, 85, 85);
+}
+
+.FormSend {
+    margin-top: 2rem;
+}
+.FormBox
+{
+    margin-top: 1rem;
+    font-family: 'Rubik, sans-serif';
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgb(54, 54, 54);
+    text-align: left;
+
+}
+
+.Boxes {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: -0.1rem;
+}
+.Boxes-2
+{
+    display: flex;
+    gap: 1rem;
+    margin-top: -0.1rem;
+    margin-bottom: 1rem;
+}
+
+
+.text-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+    margin-left: -1.8rem;
+
+}
+
+.text-inputs>* {
+    margin: 6px;
+}
+
+.text-input:checked+.text-tile {
+    background-color: #7CD2C7;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.text-input:checked+.text-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #7CD2C7;
+    color: white;
+}
+
+
+.text-input:checked+.text-tile .text-label {
+    color: white;
+    font-family: 'Rubik';
+}
+
+.text-input:focus+.text-tile {
+    background-color: #7CD2C7;
+    border-color: white;
+    color: white;
+}
+
+.text-input:focus+.text-tile:before {
+    transform: scale(1);
+    opacity: 1;
+}
+.text-input:active+.text-tile {
+    background-color: #7CD2C7;
+    border-color: white;
+    color: white;
+}
+
+.text-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    min-height: 40px;
+    border: 2px solid #7CD2C7;
+    background-color: #fff;
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.text-tile:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
+}
+
+.text-tile:hover {
+    border-color: #7CD2C7;
+}
+
+.text-tile:hover:before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.text-icon svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #494949;
+}
+
+.text-label {
+    color: black;
+    transition: 0.375s ease;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Rubik';
+    font-weight: 600;
+}
+
+.text-input {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.text-icons {
+    width: 2rem;
+    height: 2rem;
+}
+
 

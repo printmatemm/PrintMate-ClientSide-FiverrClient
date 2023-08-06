@@ -58,7 +58,7 @@ const ProductMeta = [
         Products: {
             A1: {
                 Image: "/BusinessCards/Business-Product1.png",
-                Description: "Standard ",
+                Description: "Standard",
                 List: [
                   "Lamination available",
                   "Spot UV available",
@@ -2511,16 +2511,318 @@ const ProductMeta = [
                     "Choice of paper stocks",
                     "Choice of laminations",
                 ]
-            },
-
-
-             
+            },             
         }
+    },
+    {
+        ID: "Sticker-Products",
+        Products: {
+            A1: {
+                Image: "/Stickers/Stickers-Product2.jpg",
+                Description: "Square Stickers",
+                List: [
+                    "Square stickers",
+                    "37mm and 45mm",
+                    "Silk adhesive paper"
+                ],
+                SecondaryImages:
+                [
+                    "/Stickers/Stickers-Product2/Stickers-Product1-1.jpg",
+                    "/Stickers/Stickers-Product2/Stickers-Product1-2.jpg",
+                    "/Stickers/Stickers-Product2/Stickers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "Square stickers",
+                    "37mm and 45mm",
+                    "Silk adhesive paper",
+                    "Easy to peel"
+                ]
+            },
+            A2: {
+                Image: "/Stickers/Stickers-Product1.jpg",
+                Description: "Circle Stickers",
+                List: [
+                    "Circle stickers",
+                    "37mm, 76mm and 88mm",
+                    "Saten adhesive paper"
+                ],
+                SecondaryImages:
+                [
+                    "/Stickers/Stickers-Product1/Stickers-Product1-1.jpg",
+                    "/Stickers/Stickers-Product1/Stickers-Product1-2.jpg",
+                    "/Stickers/Stickers-Product1/Stickers-Product1-3.jpg",
+                ],
+                InnerDescription:
+                [
+                    "Circle stickers",
+                    "37mm, 76mm and 88mm",
+                    "Saten adhesive paper",
+                    "Easy to peel"
+                ]
+            },
+            A3: {
+                Image: "/Stickers/Stickers-Product3.jpg",
+                Description: "Rectangle Stickers",
+                List: [
+                    "45 x 80mm, 88 x 63mm",
+                    "Saten adhesive paper",
+                    "Good for address labels"
+                ],
+                SecondaryImages:
+                [
+                    "/Stickers/Stickers-Product3/Stickers-Product1-1.jpg",
+                    "/Stickers/Stickers-Product3/Stickers-Product1-2.jpg",
+                    "/Stickers/Stickers-Product3/Stickers-Product1-3.jpg",
+                    "/Stickers/Stickers-Product3/Stickers-Product1-4.jpg",
+                ],
+                InnerDescription:
+                [
+                    "45 x 80mm, 88 x 63mm",
+                    "Saten adhesive paper",
+                    "Good for address labels",
+                    "Easy to peel"
+                ]
+            },
+            A4: {
+                Image: "/Stickers/Stickers-Product4.jpg",
+                Description: "Window Clings",
+                List: [
+                    "A4 size – 210mm x 297mm",
+                    "Choice of stocks",
+                    "Sticks to glass"
+                ],
+                SecondaryImages:
+                [
+                    "/Stickers/Stickers-Product4/Stickers-Product1-1.jpg",
+                    "/Stickers/Stickers-Product4.jpg",
+                ],
+                InnerDescription:
+                [
+                    "A4 size – 210mm x 297mm",
+                    "Choice of stocks",
+                    "Sticks to glass",
+                    "Quick delivery"
+                ]
+            },
+            A5: {
+                Image: "/Stickers/Stickers-Product6.jpg",
+                Description: "Vinyl Clings",
+                List: [
+                    "A4 size – 210mm x 297mm",
+                    "7 Sizes",
+                    "Sticks to glass"
+                ],
+                SecondaryImages:
+                [
+                    "/Stickers/Stickers-Product6/Stickers-Product1-1.jpg",
+                    "/Stickers/Stickers-Product6/Stickers-Product1-2.jpg",
+                    "/Stickers/Stickers-Product6/Stickers-Product1-3.jpg",
+                    "/Stickers/Stickers-Product6/Stickers-Product1-4.jpg",
 
+                ],
+                InnerDescription:
+                [
+                    "A4 size – 210mm x 297mm",
+                    "7 Sizes",
+                    "Sticks to glass",
+                    "Quick delivery"
+                ]
+            },
+            A6: {
+                Image: "/Stickers/Stickers-Product5.jpg",
+                Description: "Sticker Rolls",
+                List: [
+                    "Choice of stocks",
+                    "Choice of shapes",
+                    "Choice of sizes"
+                ],
+                SecondaryImages:
+                [
+                    "/Stickers/Stickers-Product5/Stickers-Product1-1.jpg",
+                    "/Stickers/Stickers-Product5/Stickers-Product1-2.jpg",
+                    "/Stickers/Stickers-Product5/Stickers-Product1-3.jpg",
+                    "/Stickers/Stickers-Product5/Stickers-Product1-4.jpg",
+                ],
+                InnerDescription:
+                [
+                    "Choice of stocks",
+                    "Choice of shapes",
+                    "Choice of sizes",
+                    "Quick delivery"
+                ]
+            },   
+        }
+    },
+    {
+    ID: "Book-Products",
+    Products: {
+        A1: {
+            Image: "/Booklets/Booklets-Product1.jpg",
+            Description: "Stapled Booklets",
+            List: [
+                "Variety of sizes",
+                "Foiling Available",
+                "Choice of laminations"
+            ],
+            SecondaryImages:
+            [
+                "/Booklets/Booklets-Product1/Booklets-Product1-1.jpg",
+                "/Booklets/Booklets-Product1/Booklets-Product1-2.jpg",
+                "/Booklets/Booklets-Product1/Booklets-Product1-3.jpg",
+                "/Booklets/Booklets-Product1/Booklets-Product1-4.jpg",
+ 
+            ],
+            InnerDescription:
+            [
+                "Variety of sizes",
+                "Foiling Available",
+                "Choice of laminations",
+            ]
+        },
+        A2: {
+            Image: "/Booklets/Booklets-Product2.jpg",
+            Description: "Perfect Bound Booklets",
+            List: [
+                "Variety of sizes",
+                "Three inside page options",
+                "Gloss or matt laminations"
+            ],
+            SecondaryImages:
+            [
+                "/Booklets/Booklets-Product2/Booklets-Product1-1.jpg",
+                "/Booklets/Booklets-Product2/Booklets-Product1-2.jpg",
+                "/Booklets/Booklets-Product2/Booklets-Product1-3.jpg",
+                "/Booklets/Booklets-Product2/Booklets-Product1-4.jpg",
+
+            ],
+            InnerDescription:
+            [
+                "Variety of sizes",
+                "Three inside page options",
+                "Gloss or matt laminations",
+            ]
+        },
+        A3: {
+            Image: "/Booklets/Booklets-Product3.jpg",
+            Description: "Wire Bound Booklets",
+            List: [
+                "Variety of sizes",
+                "Wire binding",
+                "Add finishing"
+            ],
+            SecondaryImages:
+            [
+                "/Booklets/Booklets-Product3/Booklets-Product1-1.jpg",
+                "/Booklets/Booklets-Product3/Booklets-Product1-2.jpg",
+                "/Booklets/Booklets-Product3/Booklets-Product1-3.jpg",
+                "/Booklets/Booklets-Product3/Booklets-Product1-4.jpg",
+
+            ],
+            InnerDescription:
+            [
+                "Variety of sizes",
+                "Wire binding",
+                "Add finishing",
+                "Delivery in 3-4 working days"
+            ]
+        },
+        A4: {
+            Image: "/Booklets/Booklets-Product4.jpg",
+            Description: "Orders of Service",
+            List: [
+                "Variety of sizes",
+                "Traditional uncoated silk",
+                "Add finishing"
+            ],
+            SecondaryImages:
+            [
+                "/Booklets/Booklets-Product4/Booklets-Product1-1.jpg",
+                "/Booklets/Booklets-Product4/Booklets-Product1-2.jpg",
+                "/Booklets/Booklets-Product4/Booklets-Product1-3.jpg",
+                "/Booklets/Booklets-Product4/Booklets-Product1-4.jpg",
+
+            ],
+            InnerDescription:
+            [
+                "Variety of sizes",
+                "Traditional uncoated silk",
+                "Add finishing",
+                "Delivery in 3-4 working days"
+            ]
+        },
+        A5: {
+            Image: "/Booklets/Booklets-Product5.jpg",
+            Description: "Notebooks",
+            List: [
+                "A4 and A5 size notebooks",
+                "Full colour print",
+                "Choice of paper stocks"
+            ],
+            SecondaryImages:
+            [
+                "/Merchandise/Merchendise-Product7/Merchendise-Product1-1.jpg",
+                "/Merchandise/Merchendise-Product7/Merchendise-Product1-2.jpg",
+                "/Merchandise/Merchendise-Product7/Merchendise-Product1-3.jpg",
+                "/Merchandise/Merchendise-Product7/Merchendise-Product1-4.jpg",
+            ],
+            InnerDescription:
+            [
+                "A4 and A5 size notebooks",
+                "Full colour print",
+                "Choice of paper stocks",
+                "Quick delivery"
+            ]
+        },
+        A6: {
+            Image: "/Booklets/Booklets-Product6.jpg",
+            Description: "Personalised Diaries",
+            List: [
+                "A4 and A5 size notebooks",
+                "Full colour print",
+                "Choice of paper stocks"
+            ],
+            SecondaryImages:
+            [
+                "/Booklets/Booklets-Product6/Booklets-Product1-1.jpg",
+                "/Booklets/Booklets-Product6/Booklets-Product1-2.jpg",
+                "/Booklets/Booklets-Product6.jpg"
+            ],
+            InnerDescription:
+            [
+                "A4 and A5 size notebooks",
+                "Full colour print",
+                "Choice of paper stocks",
+                "Quick delivery"
+            ]
+        },
+        A7: {
+            Image: "/Booklets/Booklets-Product7.png",
+            Description: "Notepads",
+            List: [
+                "Personalised notebooks",
+                "Choice of paper stocks",
+                "Add your logo"
+            ],
+            SecondaryImages:
+            [
+                "/Booklets/Booklets-Product7/Booklets-Product1-3.png",
+                "/Booklets/Booklets-Product7/Booklets-Product1-4.png",
+                "/Booklets/Booklets-Product7/Booklets-Product1-1.png",
+                "/Booklets/Booklets-Product7/Booklets-Product1-2.png",
+            ],
+            InnerDescription:
+            [
+                "Personalised notebooks",
+                "Choice of paper stocks",
+                "Add your logo",
+                "Flexible quantities"
+            ]
+        }
     }
                     
 
-
+    }
 ]
 
 export default ProductMeta;

@@ -1,10 +1,16 @@
-import React from 'react'
-import './styles.modules.css'
+import React, { useState } from 'react';
+import './styles.modules.css';
 import MailOutlineSharpIcon from '@mui/icons-material/MailOutlineSharp';
 import PhonePausedOutlinedIcon from '@mui/icons-material/PhonePausedOutlined';
 import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
-
+import { Link } from 'react-router-dom';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import { useNavigate } from 'react-router-dom';
 export default function Navigation() {
+
+    const Navigate = useNavigate();
+
     return (
         <>
             <div className="Navigation-Wrapper">
@@ -40,7 +46,31 @@ export default function Navigation() {
                 <div className="container Navigation-Down">
                     <div className='Navigation-Inner-Down'>
                         <h6>Home</h6>
-                        <h6>Shop All Products</h6>
+                        <Select
+                            defaultValue="Business-Cards"
+                            variant='standard'
+                            
+                            onChange={(e) => 
+                            {
+                                if(e.target.value === "Business-Cards")
+                                {
+                                    Navigate('/Product/Business-Cards');
+                                }
+                                else if(e.target.value === "Flyers")
+                                {
+                                    Navigate('/Product/Flyers');
+                                }
+                                else if(e.target.value === "Stickers")
+                                {
+                                    Navigate('/Product/Stickers-and-Labels');
+                                }
+                            }
+                        }
+                        >   
+                            <MenuItem value="Business-Cards">Business Cards</MenuItem>
+                            <MenuItem value="Flyers">Flyers</MenuItem>
+                            <MenuItem value="Stickers">Stickers</MenuItem>
+                        </Select>
                         <h6>New Products</h6>
                         <h6>Best Sellers</h6>
                         <h6>Contact</h6>
@@ -48,7 +78,7 @@ export default function Navigation() {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
+

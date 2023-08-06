@@ -215,8 +215,16 @@ const ServicesMeta = [
         CoverImage: "/Stickers/Stickers-Cover.png",
         CoverImageAlt: "Stickers and Labels Printing",
         ProductID: "Sticker-Products",
-        Tags: "From wide range of Stickers and Labels, get the right look for your next Sticker or Label.",
-        
+        Tags: "From wide range of Stickers and Labels, get the right look for your next Sticker or Label.",   
+    },
+    {
+        ID: "Books-and-Booklets",
+        Name: "Books and Booklets Printing",
+        CoverDescription: "Need to keep your customers informed and up to date on all your latest products, services and any company news? Our sturdy, perfect bound booklets , A5 printed brochures and other sized products are ideal for keeping your customers in the loop and help your brand stand out a mile from the competition.",
+        CoverImage: "/Booklets/Booklets-Cover.png",
+        CoverImageAlt: "Books and Booklets Printing",
+        ProductID: "Book-Products",
+        Tags: "From wide range of Books and Booklets, get the right look for your next Book or Booklet.",
     }
 
         
