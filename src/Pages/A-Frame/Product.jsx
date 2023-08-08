@@ -243,31 +243,74 @@ export default function () {
 
                             {Product?.Image.includes('Foil') &&
                                 <div className="ShowcasePT2-1">
-                                {
-                                    Product?.Description === "Foil Business Cards" &&
-                                    <BusinessCardType7 />
-                                }
-                                {
-                                    Product?.Description === "Flyers" &&
-                                    <FoilFlyerForm />
-                                }
-                                {
-                                    Product?.Description === "Stapled Booklets" &&
-                                    <StapledBookletForm />
-                                }
-                                {
-                                    Product?.Description === "Foil Greatings" &&
-                                    <ChristmasCardForm />
-                                }
-                                {
-                                    Product?.Description === "Foil Leaflets" &&
-                                        <FoilLeafletForm /> 
-                                }{
-                                    Product?.Description === "Foil Invitations" &&
+                                    {
+                                        Product?.Description === "Foil Business Cards" &&
+                                        <BusinessCardType7 />
+                                    }
+                                    {
+                                        Product?.Description === "Flyers" &&
+                                        <FoilFlyerForm />
+                                    }
+                                    {
+                                        Product?.Description === "Stapled Booklets" &&
+                                        <StapledBookletForm />
+                                    }
+                                    {
+                                        Product?.Description === "Foil Greatings" &&
+                                        <ChristmasCardForm />
+                                    }
+                                    {
+                                        Product?.Description === "Foil Leaflets" &&
+                                        <FoilLeafletForm />
+                                    }{
+                                        Product?.Description === "Foil Invitations" &&
                                         <FoilInviteForm />
-                                }
+                                    }
+                                    {
+                                        Product?.Description === "Presentation Folders" &&
+                                        <FoilFolderForm />
+                                    }
+                                    {
+                                        Product?.Description === "Foil Christmas Cards" &&
+                                        <ChristmasCardForm />
+                                    }
                                 </div>
                             }
+
+                            {Product?.Image.includes('Stationary') &&
+                                <div className="ShowcasePT2-1">
+                                    {
+                                        Product?.Description === "Letterheads" &&
+                                        <LetterHeadForm />
+                                    }
+                                    {
+                                        Product?.Description === "Compliment Slips" &&
+                                        <LetterHeadForm />
+                                    }
+                                    {
+                                        Product?.Description === "Note Cards" &&
+                                        <NoteCardForm />
+                                    }
+                                    {
+                                        Product?.Description === "Postcards" &&
+                                        <ChristmasCardForm />
+                                    }
+                                    {
+                                        Product?.Description === "Notepads" &&
+                                        <NotepadForm />
+                                    }
+                                                                        {
+                                        Product?.Description === "Presentation Folders" &&
+                                        <FoilFolderForm />
+                                    }
+                                    {
+                                        Product?.Description === "Bookmarks" &&
+                                        <BookmarkForm />
+                                    }
+
+                                </div>
+                            }
+
                         </div>
                     </div>
 
@@ -929,14 +972,6 @@ const StardardBusinessCardForm = () => {
                 </div>
 
             </div>
-
-
-
-
-
-
-
-
         </FormControl>
     );
 };
@@ -7340,9 +7375,9 @@ const StapledBookletForm = () => {
         Sizes: '',
         Sides: '',
         Fold: '',
-        AmountOfPrintedPages : '',
-        CoverOption : '',
-        Lamination : '',
+        AmountOfPrintedPages: '',
+        CoverOption: '',
+        Lamination: '',
         UVSpot: '',
         Quantity: 0,
         Delivery: '',
@@ -7396,7 +7431,7 @@ const StapledBookletForm = () => {
         }
     }
 
-    return(
+    return (
         <FormControl size="small">
             <div className="FormBox">
                 <h5>Choose Paper Size</h5>
@@ -7538,45 +7573,45 @@ const StapledBookletForm = () => {
             <div className="FormBox">
                 <h5>Choose Paper Weight</h5>
                 <div className="Boxes">
-                <label>
-                    <input
-                        className="text-input"
-                        type="radio"
-                        name="PaperWeight"
-                        value="115"
-                        checked={options.PaperWeight === '115'}
-                        onChange={() => handleOptionChange('PaperWeight', '115')}
-                    />
-                    <span className="text-tile">
-                        <span className="text-label">115 gsm Silk</span>
-                    </span>
-                </label>
-                <label>
-                    <input
-                        className="text-input"
-                        type="radio"
-                        name="PaperWeight"
-                        value="150"
-                        checked={options.PaperWeight === '150'}
-                        onChange={() => handleOptionChange('PaperWeight', '150')}
-                    />
-                    <span className="text-tile">
-                        <span className="text-label">150 gsm Silk</span>
-                    </span>
-                </label>
-                <label>
-                    <input
-                        className="text-input"
-                        type="radio"
-                        name="PaperWeight"
-                        value="250"
-                        checked={options.PaperWeight === '250'}
-                        onChange={() => handleOptionChange('PaperWeight', '250')}
-                    />
-                    <span className="text-tile">
-                        <span className="text-label">250 gsm Silk</span>
-                    </span>
-                </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="115"
+                            checked={options.PaperWeight === '115'}
+                            onChange={() => handleOptionChange('PaperWeight', '115')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">115 gsm Silk</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="150"
+                            checked={options.PaperWeight === '150'}
+                            onChange={() => handleOptionChange('PaperWeight', '150')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">150 gsm Silk</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="250"
+                            checked={options.PaperWeight === '250'}
+                            onChange={() => handleOptionChange('PaperWeight', '250')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">250 gsm Silk</span>
+                        </span>
+                    </label>
                 </div>
             </div>
             <div className="FormBox">
@@ -7655,32 +7690,32 @@ const StapledBookletForm = () => {
                 <h5>Choose Cover Option</h5>
                 <div className="Boxes">
 
-                <label>
-                    <input
-                        className="text-input"
-                        type="radio"
-                        name="CoverOption"
-                        value="250"
-                        checked={options.CoverOption === '250'}
-                        onChange={() => handleOptionChange('CoverOption', '250')}
-                    />
-                    <span className="text-tile">
-                        <span className="text-label">250 gsm Silk</span>
-                    </span>
-                </label>
-                <label>
-                    <input
-                        className="text-input"
-                        type="radio"
-                        name="CoverOption"
-                        value="350"
-                        checked={options.CoverOption === '350'}
-                        onChange={() => handleOptionChange('CoverOption', '350')}
-                    />
-                    <span className="text-tile">
-                        <span className="text-label">350 gsm Silk</span>
-                    </span>
-                </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="CoverOption"
+                            value="250"
+                            checked={options.CoverOption === '250'}
+                            onChange={() => handleOptionChange('CoverOption', '250')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">250 gsm Silk</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="CoverOption"
+                            value="350"
+                            checked={options.CoverOption === '350'}
+                            onChange={() => handleOptionChange('CoverOption', '350')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">350 gsm Silk</span>
+                        </span>
+                    </label>
                 </div>
             </div>
 
@@ -8044,7 +8079,7 @@ const FoilLeafletForm = () => {
         }
     }
 
-    return(
+    return (
         <FormControl size="small">
             <div className="FormBox">
                 <h5>Choose Paper Size</h5>
@@ -8467,33 +8502,33 @@ const FoilInviteForm = () => {
             </div>
             <div className="FormBox">
                 <h5>Choose Paper Weight</h5>
-                <div className="Boxes">                
-                <label>
-                    <input
-                        className="text-input"
-                        type="radio"
-                        name="PaperWeight"
-                        value="250"
-                        checked={options.PaperWeight === '250'}
-                        onChange={() => handleOptionChange('PaperWeight', '250')}
-                    />
-                    <span className="text-tile">
-                        <span className="text-label">250 gsm Silk</span>
-                    </span>
-                </label>
-                <label>
-                    <input
-                        className="text-input"
-                        type="radio"
-                        name="PaperWeight"
-                        value="350"
-                        checked={options.PaperWeight === '350'}
-                        onChange={() => handleOptionChange('PaperWeight', '350')}
-                    />
-                    <span className="text-tile">
-                        <span className="text-label">350 gsm Silk</span>
-                    </span>
-                </label>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="250"
+                            checked={options.PaperWeight === '250'}
+                            onChange={() => handleOptionChange('PaperWeight', '250')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">250 gsm Silk</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="350"
+                            checked={options.PaperWeight === '350'}
+                            onChange={() => handleOptionChange('PaperWeight', '350')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">350 gsm Silk</span>
+                        </span>
+                    </label>
                 </div>
             </div>
             <div className="FormBox">
@@ -8773,3 +8808,1717 @@ const FoilInviteForm = () => {
         </FormControl>
     )
 }
+
+const FoilFolderForm = () => {
+    const [options, setOptions] = React.useState({
+        FolderType: '',
+        Sides: '',
+        UVSpot: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    };
+
+    const Submit = () => {
+        if (options.FolderType === '' || options.Sides === '' || options.UVSpot === '' || options.Quantity === 0 || options.Delivery === '') {
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                Sizes: options.FolderType,
+                Sides: options.Sides,
+                UVSpot: options.UVSpot,
+            })
+        }
+    }
+
+    return (
+        <FormControl size="small">
+            <div className="FormBox">
+                <h5>Choose Folder Type</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="FolderType"
+                            value="A4-Interlocking"
+                            checked={options.FolderType === 'A4-Interlocking'}
+                            onChange={() => handleOptionChange('FolderType', 'A4-Interlocking')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A4 Interlocking</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="FolderType"
+                            value="A4-Interlocking-7mm"
+                            checked={options.FolderType === 'A4-Interlocking-7mm'}
+                            onChange={() => handleOptionChange('FolderType', 'A4-Interlocking-7mm')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A4 Interlocking with 7mm Spinet</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="FolderType"
+                            value="A5-Interlocking"
+                            checked={options.FolderType === 'A5-Interlocking'}
+                            onChange={() => handleOptionChange('FolderType', 'A5-Interlocking')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A5 Interlocking</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="FolderType"
+                            value="A5-Interlocking-7mm"
+                            checked={options.FolderType === 'A5-Interlocking-7mm'}
+                            onChange={() => handleOptionChange('FolderType', 'A5-Interlocking-7mm')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A5 Interlocking with 7mm Spinet</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Sides</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Single"
+                            checked={options.Sides === 'Single'}
+                            onChange={() => handleOptionChange('Sides', 'Single')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/SingleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Single</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Double"
+                            checked={options.Sides === 'Double'}
+                            onChange={() => handleOptionChange('Sides', 'Double')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/DoubleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Double</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose UV Spot</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="UVSpot"
+                            value="None"
+                            checked={options.UVSpot === 'None'}
+                            onChange={() => handleOptionChange('UVSpot', 'None')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/NoUV.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">None</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="UVSpot"
+                            value="Gold-UVSpot"
+                            checked={options.UVSpot === 'Gold-UVSpot'}
+                            onChange={() => handleOptionChange('UVSpot', 'Gold-UVSpot')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/GoldUV.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Gold UV Spot</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="UVSpot"
+                            value="Silver-UVSpot"
+                            checked={options.UVSpot === 'Silver-UVSpot'}
+                            onChange={() => handleOptionChange('UVSpot', 'Silver-UVSpot')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/SilverUV.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Silver UV Spot</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="UVSpot"
+                            value="Chrome-UVSpot"
+                            checked={options.UVSpot === 'Chrome-UVSpot'}
+                            onChange={() => handleOptionChange('UVSpot', 'Chrome-UVSpot')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/ChromeUV.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Chrome UV Spot</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="20"
+                            checked={options.Quantity === '20'}
+                            onChange={() => handleOptionChange('Quantity', '20')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">20</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="30"
+                            checked={options.Quantity === '30'}
+                            onChange={() => handleOptionChange('Quantity', '30')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">30</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="40"
+                            checked={options.Quantity === '40'}
+                            onChange={() => handleOptionChange('Quantity', '40')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">40</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="50"
+                            checked={options.Quantity === '50'}
+                            onChange={() => handleOptionChange('Quantity', '50')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">50</span>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className='FormSend'>
+                <div className="AFrameForm-2">
+                    <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div className="AFrameForm-2">
+                    <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                    <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                </div>
+
+                <div className="RequestQuote" onClick={Submit}>
+                    Request Quote
+                </div>
+            </div>
+        </FormControl>
+    )
+}
+
+const LetterHeadForm = () => {
+    const [options, setOptions] = React.useState({
+        PaperType: '',
+        PaperWeight: '',
+        Sides: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    };
+
+    const Submit = () => {
+        if (options.PaperType === '' || options.PaperWeight === '' || options.Sides === '' || options.Quantity === 0 || options.Delivery === '') {
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                PaperType: options.PaperType,
+                PaperWeight: options.PaperWeight,
+                Sides: options.Sides,
+            })
+        }
+    }
+
+    return (
+        <FormControl size="small">
+            <div className="FormBox">
+                <h5>Choose Paper Type</h5>
+                <div className='Boxes'>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperType"
+                            value="Uncoated"
+                            checked={options.PaperType === 'Uncoated'}
+                            onChange={() => handleOptionChange('PaperType', 'Uncoated')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Uncoated.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Uncoated</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Paper Weight</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="90"
+                            checked={options.PaperWeight === '90'}
+                            onChange={() => handleOptionChange('PaperWeight', '90')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">90 gsm Silk</span>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="120"
+                            checked={options.PaperWeight === '120'}
+                            onChange={() => handleOptionChange('PaperWeight', '120')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">120 gsm Silk</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="170"
+                            checked={options.PaperWeight === '170'}
+                            onChange={() => handleOptionChange('PaperWeight', '170')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">170 gsm Silk</span>
+                        </span>
+                    </label>
+
+
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Sides</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Single"
+                            checked={options.Sides === 'Single'}
+                            onChange={() => handleOptionChange('Sides', 'Single')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/SingleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Single</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Double"
+                            checked={options.Sides === 'Double'}
+                            onChange={() => handleOptionChange('Sides', 'Double')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/DoubleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Double</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '50'}
+                            onChange={() => handleOptionChange('Quantity', '50')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">50</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '100'}
+                            onChange={() => handleOptionChange('Quantity', '100')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">100</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="200"
+                            checked={options.Quantity === '200'}
+                            onChange={() => handleOptionChange('Quantity', '200')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">200</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="300"
+                            checked={options.Quantity === '300'}
+                            onChange={() => handleOptionChange('Quantity', '300')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">300</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="400"
+                            checked={options.Quantity === '400'}
+                            onChange={() => handleOptionChange('Quantity', '400')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">400</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="500"
+                            checked={options.Quantity === '500'}
+                            onChange={() => handleOptionChange('Quantity', '500')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">500</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="750"
+                            checked={options.Quantity === '750'}
+                            onChange={() => handleOptionChange('Quantity', '750')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">750</span>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1000"
+                            checked={options.Quantity === '1000'}
+                            onChange={() => handleOptionChange('Quantity', '1000')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1000</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+
+            </div>
+        </FormControl>
+    )
+};
+
+const NoteCardForm = () => {
+    const [options, setOptions] = React.useState({
+        PaperType: '',
+        PaperWeight: '',
+        Sides: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    };
+
+    const Submit = () => {
+        if (options.PaperType === '' || options.PaperWeight === '' || options.Sides === '' || options.Quantity === 0 || options.Delivery === '') {
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                PaperType: options.PaperType,
+                PaperWeight: options.PaperWeight,
+                Sides: options.Sides,
+            })
+        }
+    }
+
+    return (
+        <FormControl size="small">
+            <div className="FormBox">
+                <h5>Choose Paper Type</h5>
+                <div className='Boxes'>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperType"
+                            value="Silk"
+                            checked={options.PaperType === 'Silk'}
+                            onChange={() => handleOptionChange('PaperType', 'Silk')}
+                        />
+
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Silk.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Silk</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperType"
+                            value="Uncoated"
+                            checked={options.PaperType === 'Uncoated'}
+                            onChange={() => handleOptionChange('PaperType', 'Uncoated')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Uncoated.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Uncoated</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperType"
+                            value="Spaciality"
+                            checked={options.PaperType === 'Spaciality'}
+                            onChange={() => handleOptionChange('PaperType', 'Spaciality')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Spaciality.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Spaciality</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Paper Weight</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="350"
+                            checked={options.PaperWeight === '350'}
+                            onChange={() => handleOptionChange('PaperWeight', '350')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">350 gsm Silk</span>
+                        </span>
+                    </label>
+
+
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Sides</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Single"
+                            checked={options.Sides === 'Single'}
+                            onChange={() => handleOptionChange('Sides', 'Single')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/SingleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Single</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Double"
+                            checked={options.Sides === 'Double'}
+                            onChange={() => handleOptionChange('Sides', 'Double')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/DoubleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Double</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '50'}
+                            onChange={() => handleOptionChange('Quantity', '50')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">50</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '100'}
+                            onChange={() => handleOptionChange('Quantity', '100')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">100</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="200"
+                            checked={options.Quantity === '200'}
+                            onChange={() => handleOptionChange('Quantity', '200')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">200</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="300"
+                            checked={options.Quantity === '300'}
+                            onChange={() => handleOptionChange('Quantity', '300')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">300</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="400"
+                            checked={options.Quantity === '400'}
+                            onChange={() => handleOptionChange('Quantity', '400')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">400</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="500"
+                            checked={options.Quantity === '500'}
+                            onChange={() => handleOptionChange('Quantity', '500')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">500</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="750"
+                            checked={options.Quantity === '750'}
+                            onChange={() => handleOptionChange('Quantity', '750')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">750</span>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1000"
+                            checked={options.Quantity === '1000'}
+                            onChange={() => handleOptionChange('Quantity', '1000')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1000</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+
+            </div>
+        </FormControl>
+    )
+};
+
+const NotepadForm = () => {
+    const [options, setOptions] = React.useState({
+        Sizes: '',
+        Sides: '',
+        Lamination: '',
+        Finishing: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    };
+
+    const Submit = () => {
+        if (options.Sizes === '' || options.Sides === '' || options.Lamination === '' || options.Finishing === '' || options.Quantity === 0 || options.Delivery === '') {
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                Sizes: options.Sizes,
+                Sides: options.Sides,
+                Lamination: options.Lamination,
+                Finishing: options.Finishing,
+            })
+        }
+    }
+
+    return (
+        <FormControl size="small">
+            <div className="FormBox">
+                <h5>Choose Paper Size</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sizes"
+                            value="A4"
+                            checked={options.Sizes === 'A4'}
+                            onChange={() => handleOptionChange('Sizes', 'A4')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A4</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sizes"
+                            value="A5"
+                            checked={options.Sizes === 'A5'}
+                            onChange={() => handleOptionChange('Sizes', 'A5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A5</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Sides</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Single"
+                            checked={options.Sides === 'Single'}
+                            onChange={() => handleOptionChange('Sides', 'Single')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/SingleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Single</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Double"
+                            checked={options.Sides === 'Double'}
+                            onChange={() => handleOptionChange('Sides', 'Double')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/DoubleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Double</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Lamination</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Lamination"
+                            value="Matt"
+                            checked={options.Lamination === 'Matt'}
+                            onChange={() => handleOptionChange('Lamination', 'Matt')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/MattLamination.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Matt</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Lamination"
+                            value="Gloss"
+                            checked={options.Lamination === 'Gloss'}
+                            onChange={() => handleOptionChange('Lamination', 'Gloss')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/GlossLamination.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Gloss</span>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Finishing</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Finishing"
+                            value="LinedPages"
+                            checked={options.Finishing === 'LinedPages'}
+                            onChange={() => handleOptionChange('Finishing', 'LinedPages')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/LinedPages.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Lined Pages</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Finishing"
+                            value="PlainPages"
+                            checked={options.Finishing === 'PlainPages'}
+                            onChange={() => handleOptionChange('Finishing', 'PlainPages')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/PlainPages.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Plain Pages</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '50'}
+                            onChange={() => handleOptionChange('Quantity', '50')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">50</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '100'}
+                            onChange={() => handleOptionChange('Quantity', '100')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">100</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="200"
+                            checked={options.Quantity === '200'}
+                            onChange={() => handleOptionChange('Quantity', '200')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">200</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="300"
+                            checked={options.Quantity === '300'}
+                            onChange={() => handleOptionChange('Quantity', '300')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">300</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="400"
+                            checked={options.Quantity === '400'}
+                            onChange={() => handleOptionChange('Quantity', '400')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">400</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="500"
+                            checked={options.Quantity === '500'}
+                            onChange={() => handleOptionChange('Quantity', '500')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">500</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="750"
+                            checked={options.Quantity === '750'}
+                            onChange={() => handleOptionChange('Quantity', '750')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">750</span>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1000"
+                            checked={options.Quantity === '1000'}
+                            onChange={() => handleOptionChange('Quantity', '1000')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1000</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+            </div>
+
+        </FormControl>
+    )
+}
+
+const  BookmarkForm = () => {
+    const [options, setOptions] = React.useState({
+        Sides: '',
+        Lamination: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    };
+
+    const Submit = () => {
+        if (options.Sides === '' || options.Lamination === '' || options.Quantity === 0 || options.Delivery === '') {
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                Sides: options.Sides,
+                Lamination: options.Lamination,
+            })
+        }
+    }
+
+    return (
+        <FormControl size="small">
+            <div className="FormBox">
+                <h5>Choose Sides</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Single"
+                            checked={options.Sides === 'Single'}
+                            onChange={() => handleOptionChange('Sides', 'Single')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/SingleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Single</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sides"
+                            value="Double"
+                            checked={options.Sides === 'Double'}
+                            onChange={() => handleOptionChange('Sides', 'Double')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/DoubleSide.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Double</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Lamination</h5>
+                <div className="Boxes">
+                <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Lamination"
+                            value="None"
+                            checked={options.Lamination === 'None'}
+                            onChange={() => handleOptionChange('Lamination', 'None')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/NoLamination.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">None</span>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Lamination"
+                            value="Matt"
+                            checked={options.Lamination === 'Matt'}
+                            onChange={() => handleOptionChange('Lamination', 'Matt')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/MattLamination.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Matt</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Lamination"
+                            value="Gloss"
+                            checked={options.Lamination === 'Gloss'}
+                            onChange={() => handleOptionChange('Lamination', 'Gloss')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/GlossLamination.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Gloss</span>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="25"
+                            checked={options.Quantity === '25'}
+                            onChange={() => handleOptionChange('Quantity', '25')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">25</span>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '50'}
+                            onChange={() => handleOptionChange('Quantity', '50')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">50</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '100'}
+                            onChange={() => handleOptionChange('Quantity', '100')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">100</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="200"
+                            checked={options.Quantity === '200'}
+                            onChange={() => handleOptionChange('Quantity', '200')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">200</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="400"
+                            checked={options.Quantity === '400'}
+                            onChange={() => handleOptionChange('Quantity', '400')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">400</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="500"
+                            checked={options.Quantity === '500'}
+                            onChange={() => handleOptionChange('Quantity', '500')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">500</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="750"
+                            checked={options.Quantity === '750'}
+                            onChange={() => handleOptionChange('Quantity', '750')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">750</span>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1000"
+                            checked={options.Quantity === '1000'}
+                            onChange={() => handleOptionChange('Quantity', '1000')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1000</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+            </div>
+
+        </FormControl>
+    )
+}
+

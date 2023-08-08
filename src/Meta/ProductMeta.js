@@ -2435,7 +2435,6 @@ const ProductMeta = [
                     "/Stationary/Stationary-Product6/Stationary-Product1-1.jpg",
                     "/Stationary/Stationary-Product6/Stationary-Product1-2.jpg",
                     "/Stationary/Stationary-Product6/Stationary-Product1-3.jpg",
-                    "/Stationary/Stationary-Product6/Stationary-Product1-4.jpg",
                 ],
                 InnerDescription:
                 [
