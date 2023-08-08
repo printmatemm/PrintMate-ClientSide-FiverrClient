@@ -20,10 +20,6 @@ export default function () {
         }
     }, [Product])
 
-
-
-
-
     const ChangeProductImage = (image, index) => {
         document.getElementById("MainImage").src = image;
         document.getElementById("MainImage").style.animation = "FadeIn 0.5s ease-in-out";
@@ -173,7 +169,6 @@ export default function () {
                                 </div>
                             }
 
-
                             {Product?.Image.includes("Calenders") &&
                                 <div className="ShowcasePT2-1">
                                     {Product?.Description === "Desk Calender" &&
@@ -187,6 +182,7 @@ export default function () {
                                     }
                                 </div>
                             }
+
                             {Product?.Image.includes("Cardboard-Signs") &&
                                 <CardboardForm />
                             }
@@ -203,10 +199,43 @@ export default function () {
                                 </div>
                             }
 
+                            {Product?.Image.includes("Aluminum") &&
+                                <div className="ShowcasePT2-1">
+                                    <AluminumForm />
+                                </div>
+                            }
 
+                            {Product?.Image.includes("Banners") &&
+                                <div className="ShowcasePT2-1">
+                                    {Product?.Description === "Roller Banners" &&
+                                        <RollerBannerForm />
+                                    }
+                                    {Product?.Description === "Flags" &&
+                                        <FlagForm />
+                                    }
+                                    {Product?.Description === "PVC Banners" &&
+                                        <PVCBannerForm />
+                                    }
+                                    {Product?.Description === "PVC Free Banners" &&
+                                        <PVCBannerForm />
+                                    }
+                                    {Product?.Description === "PVC Mesh Banners" &&
+                                        <PVCBannerForm2/>
+                                    }
+                                    {Product?.Description === "Stretch Straight Fabric" &&
+                                        <StretchStraightFabricForm />
+                                    }
+                                    {Product?.Description === "Stretch Curved Fabric" &&
+                                        <StretchCurvedFabricForm />
+                                    }
+                                    {Product?.Description === "Exhibition Stands" &&
+                                        <ExhibitionStandForm />
+                                    }
+                                    
 
-
-
+                                    
+                                </div>
+                            }
                         </div>
                     </div>
 
@@ -4349,8 +4378,7 @@ const CorrexForm = () => {
     };
 
     const Submit = () => {
-        if (options.Sizes==='' || options.Sides === '' || options.Delivery==='' || options.Delivery === 0)
-        {
+        if (options.Sizes === '' || options.Sides === '' || options.Quantity === '' || options.Delivery === 0) {
             notification.open({
                 message: 'Please Select All Options',
                 description:
@@ -4432,7 +4460,7 @@ const CorrexForm = () => {
                         </span>
                     </label>
                     <label>
-                    <input
+                        <input
                             className="text-input"
                             type="radio"
                             name="Sizes"
@@ -4648,4 +4676,1933 @@ const CorrexForm = () => {
         </FormControl>
     )
 }
+
+const AluminumForm = () => {
+    const [options, setOptions] = React.useState({
+        Sizes: '',
+        DrillOption: '',
+        Corner: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    };
+
+    const Submit = () => {
+        if (options.DrillOption === '' || options.Corner === '' || options.Sizes === '' || options.Delivery === '' || options.Quantity === 0) {
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                DrillOption: options.DrillOption,
+                Corner: options.Corner,
+            })
+        }
+    }
+
+    return (
+        <FormControl size="small">
+            <div className="FormBox">
+                <h5>Choose Paper Size</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sizes"
+                            value="A0"
+                            checked={options.Sizes === 'A0'}
+                            onChange={() => handleOptionChange('Sizes', 'A0')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A0</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sizes"
+                            value="A1"
+                            checked={options.Sizes === 'A1'}
+                            onChange={() => handleOptionChange('Sizes', 'A1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sizes"
+                            value="A2"
+                            checked={options.Sizes === 'A2'}
+                            onChange={() => handleOptionChange('Sizes', 'A2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Sizes"
+                            value="A3"
+                            checked={options.Sizes === 'A3'}
+                            onChange={() => handleOptionChange('Sizes', 'A3')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">A3</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Drill Option</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="DrillOption"
+                            value="None"
+                            checked={options.DrillOption === 'None'}
+                            onChange={() => handleOptionChange('DrillOption', 'None')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/NoCorners.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">None</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="DrillOption"
+                            value="Drilled"
+                            checked={options.DrillOption === 'Drilled'}
+                            onChange={() => handleOptionChange('DrillOption', 'Drilled')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Drilled.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Drilled</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Corner</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Corner"
+                            value="Square"
+                            checked={options.Corner === 'Square'}
+                            onChange={() => handleOptionChange('Corner', 'Square')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/SquereCorners.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+
+                            <span className="text-label">Square</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Corner"
+                            value="Rounded"
+                            checked={options.Corner === 'Rounded'}
+                            onChange={() => handleOptionChange('Corner', 'Rounded')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/RoundedCorners.png" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+
+                            <span className="text-label">Rounded</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="20"
+                            checked={options.Quantity === '20'}
+                            onChange={() => handleOptionChange('Quantity', '20')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">20</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="30"
+                            checked={options.Quantity === '30'}
+                            onChange={() => handleOptionChange('Quantity', '30')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">30</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="40"
+                            checked={options.Quantity === '40'}
+                            onChange={() => handleOptionChange('Quantity', '40')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">40</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="50"
+                            checked={options.Quantity === '50'}
+                            onChange={() => handleOptionChange('Quantity', '50')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">50</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '100'}
+                            onChange={() => handleOptionChange('Quantity', '100')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">100</span>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className='FormSend'>
+                <div className="AFrameForm-2">
+                    <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div className="AFrameForm-2">
+                    <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                    <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                </div>
+
+                <div className="RequestQuote" onClick={Submit}>
+                    Request Quote
+                </div>
+            </div>
+        </FormControl>
+    )
+}
+
+const RollerBannerForm = () => {
+    const [options, setOptions] = React.useState({
+        RollerBannerType: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    }
+
+    const Submit = () => {
+        if (options.RollerBannerType === '' || options.Quantity === 0 || options.Delivery === '') {
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                RollerBannerType: options.RollerBannerType,
+            })
+        }
+    }
+
+    return (
+        <FormControl size="small">
+            <div className="FormBox">
+                <h5>Choose Roller Banner Type</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="RollerBannerType"
+                            value="Standard"
+                            checked={options.RollerBannerType === 'Standard'}
+                            onChange={() => handleOptionChange('RollerBannerType', 'Standard')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Banners/Banner-Product1/Banner-Product1-1.jpg" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Standard</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="RollerBannerType"
+                            value="Premium"
+                            checked={options.RollerBannerType === 'Premium'}
+                            onChange={() => handleOptionChange('RollerBannerType', 'Premium')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Banners/Banner-Product1/Banner-Product1-2.jpg" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Premium</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="RollerBannerType"
+                            value="Extra-Wide"
+                            checked={options.RollerBannerType === 'Extra-Wide'}
+                            onChange={() => handleOptionChange('RollerBannerType', 'Extra-Wide')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Banners/Banner-Product1/Banner-Product1-3.jpg" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+
+                            <span className="text-label">Extra-Wide</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="RollerBannerType"
+                            value="Double-Sided"
+                            checked={options.RollerBannerType === 'Double-Sided'}
+                            onChange={() => handleOptionChange('RollerBannerType', 'Double-Sided')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Banners/Banner-Product1/Banner-Product1-4.jpg" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Double-Sided</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="RollerBannerType"
+                            value="Desktop"
+                            checked={options.RollerBannerType === 'Desktop'}
+                            onChange={() => handleOptionChange('RollerBannerType', 'Desktop')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Banners/Banner-Product1/Banner-Product1-4.jpg" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Desktop</span>
+                        </span>
+                    </label>
+                </div>
+
+            </div>
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="20"
+                            checked={options.Quantity === '20'}
+                            onChange={() => handleOptionChange('Quantity', '20')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">20</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="30"
+                            checked={options.Quantity === '30'}
+                            onChange={() => handleOptionChange('Quantity', '30')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">30</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="40"
+                            checked={options.Quantity === '40'}
+                            onChange={() => handleOptionChange('Quantity', '40')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">40</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="50"
+                            checked={options.Quantity === '50'}
+                            onChange={() => handleOptionChange('Quantity', '50')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">50</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '100'}
+                            onChange={() => handleOptionChange('Quantity', '100')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">100</span>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className='FormSend'>
+                <div className="AFrameForm-2">
+                    <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div className="AFrameForm-2">
+                    <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                    <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                </div>
+
+                <div className="RequestQuote" onClick={Submit}>
+                    Request Quote
+                </div>
+            </div>
+        </FormControl>
+    )
+}
+
+const FlagForm = () => {
+    const [options, setOptions] = React.useState({
+        FlagType: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    }
+
+    const Submit = () => {
+        if (options.FlagType === '' || options.Quantity === 0 || options.Delivery === '') {
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                FlagType: options.FlagType,
+            })
+        }
+    }
+
+    return (
+        <FormControl size="small">
+            <div className="FormBox">
+                <h5>Choose Flag Type</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="FlagType"
+                            value="Feather"
+                            checked={options.FlagType === 'Feather'}
+                            onChange={() => handleOptionChange('FlagType', 'Feather')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Banners/Banner-Product2/Banner-Product1-2.jpg" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Feather</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="FlagType"
+                            value="Teardrop"
+                            checked={options.FlagType === 'Teardrop'}
+                            onChange={() => handleOptionChange('FlagType', 'Teardrop')}
+                        />
+                        <span className="text-tile">
+                            <span className="radio-icon">
+                                <img src="/Banners/Banner-Product2/Banner-Product1-4.jpg" alt="Bicycle" className='radio-icons-2' />
+                            </span>
+                            <span className="text-label">Teardrop</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="20"
+                            checked={options.Quantity === '20'}
+                            onChange={() => handleOptionChange('Quantity', '20')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">20</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="30"
+                            checked={options.Quantity === '30'}
+                            onChange={() => handleOptionChange('Quantity', '30')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">30</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="40"
+                            checked={options.Quantity === '40'}
+                            onChange={() => handleOptionChange('Quantity', '40')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">40</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="50"
+                            checked={options.Quantity === '50'}
+                            onChange={() => handleOptionChange('Quantity', '50')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">50</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="100"
+                            checked={options.Quantity === '100'}
+                            onChange={() => handleOptionChange('Quantity', '100')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">100</span>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className='FormSend'>
+                <div className="AFrameForm-2">
+                    <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                    <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
+                <div className="AFrameForm-2">
+                    <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                    <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                </div>
+
+                <div className="RequestQuote" onClick={Submit}>
+                    Request Quote
+                </div>
+            </div>
+        </FormControl>
+    )
+}
+
+const PVCBannerForm = () => {
+    const [options, setOptions] = React.useState({
+        Sizes: '',
+        PaperType: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    }
+
+    const Submit = () => {
+        if(options.Sizes === '' || options.PaperType === '' || options.Quantity === 0 || options.Delivery === ''){
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                Sizes: options.Sizes,
+                PaperType: options.PaperType,
+            })
+        }
+
+    }
+
+    const handleTypeChange = (value) => {
+        handleOptionChange('PaperType', value);
+    }
+
+    const handleWeightChange = (value) => {
+        handleOptionChange('Sizes', value);
+    }
+
+    return (
+        <FormControl size="small">
+
+            <div className="FormBox">
+                <h5>Choose Paper Size</h5>
+                <select
+                    className="Selection"
+                    onChange={(e) => handleWeightChange(e.target.value)}
+                >
+                    <option value="0.5m x 1m">0.5m x 1m</option>
+                    <option value="1m x 0.5m">1m x 0.5m</option>
+                    <option value="1m x 1m">1m x 1m</option>
+                    <option value="1.5m x 1m">1.5m x 1m</option>
+                    <option value="1m x 2m">1m x 2m</option>
+                    <option value="2.5m x 1m">2.5m x 1m</option>
+                    <option value="3m x 1m">3m x 1m</option>
+                    <option value="3.5m x 1m">3.5m x 1m</option>
+                    <option value="4m x 1m">4m x 1m</option>
+                    <option value="2.5m x 1.5m">2.5m x 1.5m</option>
+                    <option value="3.5m x 1.5m">3.5m x 1.5m</option>
+                    <option value="2m x 2m">2m x 2m</option>
+                    <option value="3m x 2m">3m x 2m</option>
+                    <option value="4m x 2m">4m x 2m</option>
+                    <option value="6m x 2m">6m x 2m</option>
+                </select>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Paper Type</h5>
+                <select
+                    className="Selection"
+                    onChange={(e) => handleTypeChange(e.target.value)}
+                    
+                >
+                    <option value="450 gsm Banner PVC">450 gsm Banner PVC</option>
+                    <option value="330 gsm Kavalan Greyback">330 gsm Kavalan Greyback</option>
+                    <option value="300 gsm Kavalan">300 gsm Kavalan</option>
+                    <option value="300 gsm Mesh">300 gsm Mesh</option>
+                    <option value="450 gsm PVC">450 gsm PVC</option>
+                </select>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+            </div>
+        </FormControl>
+    );
+};
+
+const PVCBannerForm2 = () => {
+    const [options, setOptions] = React.useState({
+        Sizes: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    }
+
+    const Submit = () => {
+        if(options.Sizes === '' || options.Quantity === 0 || options.Delivery === ''){
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                Sizes: options.Sizes,
+            })
+        }
+
+    }
+
+    const handleWeightChange = (value) => {
+        handleOptionChange('Sizes', value);
+    }
+
+    return (
+        <FormControl size="small">
+
+            <div className="FormBox">
+                <h5>Choose Paper Size</h5>
+                <select
+                    className="Selection"
+                    onChange={(e) => handleWeightChange(e.target.value)}
+                >
+                    <option value="0.5m x 1m">0.5m x 1m</option>
+                    <option value="1m x 0.5m">1m x 0.5m</option>
+                    <option value="1m x 1m">1m x 1m</option>
+                    <option value="1.5m x 1m">1.5m x 1m</option>
+                    <option value="1m x 2m">1m x 2m</option>
+                    <option value="2.5m x 1m">2.5m x 1m</option>
+                    <option value="3m x 1m">3m x 1m</option>
+                    <option value="3.5m x 1m">3.5m x 1m</option>
+                    <option value="4m x 1m">4m x 1m</option>
+                    <option value="2.5m x 1.5m">2.5m x 1.5m</option>
+                    <option value="3.5m x 1.5m">3.5m x 1.5m</option>
+                    <option value="2m x 2m">2m x 2m</option>
+                    <option value="3m x 2m">3m x 2m</option>
+                    <option value="4m x 2m">4m x 2m</option>
+                    <option value="6m x 2m">6m x 2m</option>
+                </select>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+            </div>
+        </FormControl>
+    );
+};
+
+const StretchStraightFabricForm = () => {
+    const [options, setOptions] = React.useState({
+        Sizes: '',
+        PaperType: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    }
+
+    const Submit = () => {
+        if(options.Sizes === '' || options.PaperType === '' || options.Quantity === 0 || options.Delivery === ''){
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                Sizes: options.Sizes,
+                PaperType: options.PaperType,
+            })
+        }
+
+    }
+
+    const handleTypeChange = (value) => {
+        handleOptionChange('PaperType', value);
+    }
+
+    const handleWeightChange = (value) => {
+        handleOptionChange('Sizes', value);
+    }
+
+    return (
+        <FormControl size="small">
+
+            <div className="FormBox">
+                <h5>Choose Paper Size</h5>
+                <select
+                    className="Selection"
+                    onChange={(e) => handleWeightChange(e.target.value)}
+                >
+                    <option value="1m straight 2280x1000mm">1m straight 2280x1000mm</option>
+                    <option value="1.5m straight 2280x1500mm">1.5m straight 2280x1500mm</option>
+                    <option value="2m straight 2280x2000mm">2m straight 2280x2000mm</option>
+                    <option value="2.5m straight 2500x2280mm">2.5m straight 2500x2280mm</option>
+                    <option value="3m straight 2922x2280mm">3m straight 2922x2280mm</option>
+                    <option value="4m straight 4000x2280mm">4m straight 4000x2280mm</option>
+                    <option value="5m straight 5000x2280mm">5m straight 5000x2280mm</option>
+                    <option value="6m straight 5960x2280mm">6m straight 5960x2280mm</option>
+                </select>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Paper Type</h5>
+                <select
+                    className="Selection"
+                    onChange={(e) => handleTypeChange(e.target.value)}    
+                >
+                    <option value="Stretch Fabric Straight">Stretch Fabric Straight</option>
+                    <option value="Stretch Fabric Straight Graphic">Stretch Fabric Straight Graphic </option>
+                </select>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+            </div>
+        </FormControl>
+    );
+};
+
+const StretchCurvedFabricForm = () => {
+    const [options, setOptions] = React.useState({
+        Sizes: '',
+        PaperType: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    }
+
+    const Submit = () => {
+        if(options.Sizes === '' || options.PaperType === '' || options.Quantity === 0 || options.Delivery === ''){
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                Sizes: options.Sizes,
+                PaperType: options.PaperType,
+            })
+        }
+
+    }
+
+    const handleTypeChange = (value) => {
+        handleOptionChange('PaperType', value);
+    }
+
+    const handleWeightChange = (value) => {
+        handleOptionChange('Sizes', value);
+    }
+
+    return (
+        <FormControl size="small">
+
+            <div className="FormBox">
+                <h5>Choose Paper Size</h5>
+                <select
+                    className="Selection"
+                    onChange={(e) => handleWeightChange(e.target.value)}
+                >
+                    <option value="2.5m curved 2640x2280mm">2.5m curved 2640x2280mm</option>
+                    <option value="3m curved 3230x2280mm">3m curved 3230x2280mm</option>
+                    <option value="4m curved 4380x2280mm">4m curved 4380x2280mm</option>
+                    <option value="5m curved 5480x2280mm">5m curved 5480x2280mm</option>
+                    <option value="6m curved 6540x2280mm">6m curved 6540x2280mm</option>
+                </select>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Paper Type</h5>
+                <select
+                    className="Selection"
+                    onChange={(e) => handleTypeChange(e.target.value)}    
+                >
+                    <option value="Stretch Fabric Curved">Stretch Fabric Curved</option>
+                    <option value="Stretch Fabric Curved Graphic">Stretch Fabric Straight Curved</option>
+                </select>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+            </div>
+        </FormControl>
+    );
+};
+
+const ExhibitionStandForm = () => {
+    const [options, setOptions] = React.useState({
+        Sizes: '',
+        Quantity: 0,
+        Delivery: '',
+        Name: '',
+        Email: '',
+        Phone: '',
+    });
+
+    const [Name, setName] = React.useState('');
+    const [Email, setEmail] = React.useState('');
+    const [Phone, setPhone] = React.useState('');
+    const [Address, setAddress] = React.useState('');
+
+    const handleOptionChange = (category, value) => {
+        setOptions((prevOptions) => ({
+            ...prevOptions,
+            [category]: value,
+        }));
+    }
+
+    const Submit = () => {
+        if(options.Sizes === '' || options.Quantity === 0 || options.Delivery === ''){
+            notification.open({
+                message: 'Please Select All Options',
+                description:
+                    'Please Select All Options',
+                icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+            })
+            return;
+        }
+        if (ValidateForm(Name, Email, Phone, Address)) {
+            SuccessNotification();
+            CallAPI({
+                Name: Name,
+                Email: Email,
+                Phone: Phone,
+                Address: Address,
+                Quantity: options.Quantity,
+                Delivery: options.Delivery,
+                Sizes: options.Sizes,
+            })
+        }
+
+    }
+
+    const handleWeightChange = (value) => {
+        handleOptionChange('Sizes', value);
+    }
+
+    return (
+        <FormControl size="small">
+
+            <div className="FormBox">
+                <h5>Choose Paper Size</h5>
+                <select
+                    className="Selection"
+                    onChange={(e) => handleWeightChange(e.target.value)}
+                >
+                    <option value="1x3 Exhibition Stand">1x3 Exhibition Stand</option>
+                    <option value="2x3 Exhibition Stand">2x3 Exhibition Stand</option>
+                    <option value="3x3 Exhibition Stand">3x3 Exhibition Stand</option>
+                    <option value="4x3 Exhibition Stand">4x3 Exhibition Stand</option>
+                    <option value="">Podium Graphics</option>
+                </select>
+            </div>
+
+            <div className="FormBox">
+                <h5>Choose Quantity</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="1"
+                            checked={options.Quantity === '1'}
+                            onChange={() => handleOptionChange('Quantity', '1')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">1</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="2"
+                            checked={options.Quantity === '2'}
+                            onChange={() => handleOptionChange('Quantity', '2')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">2</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="5"
+                            checked={options.Quantity === '5'}
+                            onChange={() => handleOptionChange('Quantity', '5')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">5</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="Quantity"
+                            value="10"
+                            checked={options.Quantity === '10'}
+                            onChange={() => handleOptionChange('Quantity', '10')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">10</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div className="FormBox">
+                <h5>Choose Delivery</h5>
+                <div className="Boxes">
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '1-2'}
+                            onChange={() => handleOptionChange('Delivery', '1-2')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">1-2 Delivery Days</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="radio-input"
+                            type="radio"
+                            name="engine"
+                            value="Delivery"
+                            checked={options.Delivery === '3-4'}
+                            onChange={() => handleOptionChange('Delivery', '3-4')}
+                        />
+                        <span className="radio-tile">
+                            <span className="radio-icon">
+                                <img src="/Icons/Delivery.png" alt="Bicycle" className='radio-icons' />
+                            </span>
+                            <span className="radio-label">3-4 Delivery Days</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div className='FormSend'>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Name" value={Name} onChange={(e) => setName(e.target.value)} />
+                        <input type="text" placeholder="Email" value={Email} onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="AFrameForm-2">
+                        <input type="text" placeholder="Phone" value={Phone} onChange={(e) => setPhone(e.target.value)} />
+                        <input type="text" placeholder="Address" value={Address} onChange={(e) => setAddress(e.target.value)} />
+                    </div>
+
+                    <div className="RequestQuote" onClick={Submit}>
+                        Request Quote
+                    </div>
+                </div>
+            </div>
+        </FormControl>
+    );
+};
+
+
+
+
+
+
+
+
+
 
