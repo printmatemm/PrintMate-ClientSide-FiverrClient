@@ -108,6 +108,7 @@ export default function () {
                                 <div className="RoadMapImageHolder">
                                     <img src="/ProductCover.png" alt="FAQ" />
                                 </div>
+                                <div className="FAQHidden">
                                 <h4>Frequently Asked Questions</h4>
                                 <Collapse accordion items={items}
                                     style={{
@@ -117,6 +118,7 @@ export default function () {
                                         fontFamily: 'Rubik'
 
                                     }} />
+                                </div>
                             </div>
                         </div>
 

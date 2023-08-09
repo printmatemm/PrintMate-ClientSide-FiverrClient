@@ -231,3 +231,66 @@
     margin-top: 1rem;
     text-align: justify;
 }
+
+@media (max-width:480px){
+    .AFrameCover
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .AFramePT1
+    {
+        text-align: center;
+    }
+    .AFramePT2
+    {
+        margin-top: 1rem;
+    }
+    .AFramePT3Wrapper
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .AFramePT3
+    {
+        margin-top: 1rem;
+    }
+    .AProductsDisplay-Inner
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .AProductsDisplay-1
+    {
+        width: 90%;
+    }
+    .AProduct-Image img
+    {
+        height: 20%;
+    }
+    .AProduct-Description
+    {
+        padding: 0.5rem;
+    }
+    .View-Product button
+    {
+        width: 90%;
+    }
+    .FAQs-Wrapper
+    {
+        margin-top: 1rem;
+    }
+    .AProductsDisplay
+    {
+        text-align: left;
+        font-size:.875em!important;
+        padding: 0.5rem;
+    }
+
+}

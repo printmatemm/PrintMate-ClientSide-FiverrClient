@@ -6,14 +6,14 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Footer() {
-  return (
-    <>
-                <div className="footer">
+    return (
+        <>
+            <div className="footer">
                 <div className="container footer-inner">
                     <div className="footer-1">
                         <h3>PrintMate</h3>
                         <p>
-                        A print is a plot of land that is used to grow crops and raise livestock, as in our farm, we raise sheep and sell their wool. The word farm is also used as a verb to mean to work land.</p>
+                            A print is a plot of land that is used to grow crops and raise livestock, as in our farm, we raise sheep and sell their wool. The word farm is also used as a verb to mean to work land.</p>
                     </div>
                     <div className="footer-1">
                         <h3>Get in Touch</h3>
@@ -38,20 +38,20 @@ export default function Footer() {
                     </div>
                     <div className="footer-icons-container">
                         <div className="footer-icon">
-                            <FacebookIcon/>
+                            <FacebookIcon />
                         </div>
                         <div className="footer-icon">
-                            <InstagramIcon/>
+                            <InstagramIcon />
                         </div>
                         <div className="footer-icon">
-                            <TwitterIcon/>
+                            <TwitterIcon />
                         </div>
                         <div className="footer-icon">
-                            <LinkedInIcon/>
+                            <LinkedInIcon />
                         </div>
                     </div>
                 </div>
             </div>
-    </>
-  )
+        </>
+    )
 }

@@ -125,7 +125,7 @@
 
 .Landing-Page-Cover img {
     width: 120%;
-    height: 100vh;
+    height: 110vh !important;
     object-fit: cover;
 }
 
@@ -195,6 +195,7 @@
     align-items: center;
     flex-direction: column;
 }
+
 .carousel-section2 h2{
     font-family: 'Rubik';
     font-size: 2rem;
@@ -212,6 +213,7 @@
     font-size: 1.5rem;
     color: rgb(95, 95, 95);
 }
+
 
 .carousel-section2 ul {
     display: flex;
@@ -240,6 +242,7 @@
     color: #fff;
     border: 2px solid #7cd2c7;
 }
+
 
 .carousel-btn {
     display: flex;
@@ -340,6 +343,7 @@
     object-fit: cover;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
 
 .grid-1div {
     position: absolute;
@@ -487,114 +491,153 @@
     background-color: transparent;
     color: #7cd2c7;
 }
-.footer
-{
-    background-color: #fff;
-}
-.footer-inner
-{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    text-align: left;
-    padding: 0.5rem;
-    border-radius: 5px;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    transition-duration: 1s ease-in;
-    color: black;
-}
-.footer-1 {
-    flex: 1;
-    text-align: left;
-    padding: 1rem;
-    margin-top: 0.5rem;
 
-}
 
-.footer-1 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
+@media (max-width:480px){
+    .Company-Name
+    {
+        font-size: 2rem !important; 
+    }
+    .carousel-section2 img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .carousel-section1 h1 {
+        font-size: 4rem !important;
+        top: 40%;
+        left: 50%;
+    }
+    .carousel-section2 h2{
+        font-size: 1.5rem !important;
+        margin-left: 1rem;
+        margin-right: 1.5rem;
+        margin-top: 0.5rem;
+        text-align: left;
+        color: black;
+        margin-bottom: 0.5rem;
+    }
+    .carousel-section2 p {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        text-align: center;
+        font-size: 1rem !important;
+        color: rgb(95, 95, 95);
+    }
+    .carousel-section2 ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+        text-align: left;
+        font-family: 'Nunito';
+        font-size: 0.8rem !important;
+        color: rgb(0, 0, 0);
+        margin-right: 2rem;
+    }
+    .carousel-section2 li {
+        width: 90% !important;
+        border: 2px solid #7cd2c7;
+        padding: 0.5rem;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        text-align: center;
+    }
+    .carousel-section2 li:hover {
+        background-color: #7cd2c7;
+        color: #fff;
+        border: 2px solid #7cd2c7;
+    }
+    .carousel-btn button {
+        font-size: 1rem !important;
+        width: 80% !important;
+        margin-right: 0rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .Landing-Page-Cover img {
 
-.footer-1 p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
+        height: 90vh !important;
+        object-fit: cover;
+    }
+    .ourselves
+    {
+        margin-top: 1rem !important;
+    }
+    .ourselves-inner {
+        grid-template-columns: 100% !important;
+        justify-content: left;
+        width: 100%;
+        padding: 1rem;
+    }
+    .Grid-Wrapper {
+        margin-top: -1rem;
+    }
+    .grid {
+        grid-template-columns: 100% !important; 
+    }
+    .grid-1 {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .grid-1div {
+        top: 90% !important;
+        left: 50% !important;
+        width: 100% !important;
+        height: 20% !important;
+    }
+    .grid-1div:hover{
+        top: 75% !important;
+        left: 50% !important;
+        width: 100% !important;
+        height: 50% !important;
+    }
+    .grid-1 h5 {
+        font-size: 23px !important;
+    }
+    .grid-1 h6 {
+        font-size: 18px !important;
+    }
+    .grid-1div p{
+        display: none;
+        font-size: 13px !important;
+    }
+    .Headingg
+    {
+        font-size: 2rem !important;
+        margin-top: -1rem;
+    }
+    .about-us
+    {
+        grid-template-columns: 100% !important;
+        justify-content: left;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem !important;
+    }
+    .about-us-1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+    .about-btn
+    {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        margin-top: 1rem;
+    }    
+    .about-btn button
+    {
+        font-size: 1rem !important;
+        width: 80% !important;
+        margin-right: 0rem !important;
+        margin-bottom: 0.5rem !important;
+    }
 
-.footer-1 ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-1 li {
-    margin-bottom: 5px;
-    font-size: 1rem;
-
-}
-.footer-1 button {
-    font-size: 1.2rem;
-    width: 50%;
-    background-color: #7cd2c7;
-    color: #fff;
-    border: 1px solid white;
-    cursor: pointer;
-    padding: 0.2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 5px;
-    margin-right: 0.5rem;
-    transition-duration: 1s ease-in;
-}
-.footer-end
-{
-    width: 100%;
-    background-color:#7cd2c7
-}
-.footer-end-inner
-{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: row;
-    text-align: left;
-    padding: 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition-duration: 1s ease-in;
-    color: black;
-}
-.footer-end-inner h6
-{
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.footer-end-inner p
-{
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-.footer-icons-container
-{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-direction: row;
-    text-align: left;
-    padding: 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition-duration: 1s ease-in;
-    color: black;
-}
-.footer-icon
-{
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-    color: #fff;
 }

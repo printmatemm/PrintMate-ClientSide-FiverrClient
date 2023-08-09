@@ -40,16 +40,6 @@ export default function Navigation() {
         };
     }, []);
 
-    const handleMenuItemClick = (value) => {
-        if (value === 'Business-Cards') {
-            Navigate('/Product/Business-Cards');
-        } else if (value === 'Flyers') {
-            Navigate('/Product/Flyers');
-        } else if (value === 'Stickers') {
-            Navigate('/Product/Stickers-and-Labels');
-        }
-    };
-
     return (
         <>
             <div className="Navigation-Wrapper">
@@ -97,14 +87,14 @@ export default function Navigation() {
                 }
                 {/* End of Desktop */}
                 {/* Mobile View */}
-                {deviceType === 'tablet' &&
+                {(deviceType === 'tablet' || deviceType==="mobile") &&
                     <>
                         <div className="Navigation">
                             <h1 className="Company-Name">Print<span>Mate</span></h1>
                             <IconButton onClick={() => setOpen(!open)}>
                                 <MenuIcon className='Menu' />
                             </IconButton>
-                            <Drawer
+                            {open && <Drawer
                                 anchor={'right'}
                                 open={open}
                                 onClose={() => setOpen(false)}
@@ -115,7 +105,7 @@ export default function Navigation() {
                                 }}
                                 className={`AnimatedDrawer ${open ? 'Open' : 'Closed'}`}
                             >
-                                <div style={{ padding: 100 }} className='Sidebar'>
+                                <div style={{ padding: 50 }} className='Sidebar'>
                                     <div className='CloseBtn'
                                         onClick={() => setOpen(false)}
                                     >
@@ -166,7 +156,7 @@ export default function Navigation() {
                                     </div>
                                 </div>
                                 </div>
-                            </Drawer>
+                            </Drawer>}
                         </div>
                     </>
                 }

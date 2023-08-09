@@ -30,3 +30,19 @@
     color: rgb(0, 0, 0);
     margin: 0.5rem;
 }
+
+@media (max-width:480px){
+    .PathwayContainer
+    {
+        display: none;
+        flex-direction: column;
+    }
+    .PathWayDiv
+    {
+        margin: 0.3rem;
+    }
+    .PathWayDiv p
+    {
+        font-size: 0.9rem;
+    }
+}

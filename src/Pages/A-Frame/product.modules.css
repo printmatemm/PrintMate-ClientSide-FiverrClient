@@ -508,3 +508,256 @@
     width: 100%;
     font-weight: bold;
 }
+
+@media (max-width:480px){
+    .Showcase {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        padding-top: 1rem;
+        border: 1px solid #d3f3ef;
+        border-radius: 5px;
+        box-shadow: 0px 2px 23px 0px rgb(0, 0, 0, 0.2);
+        height: fit-content;
+    }
+    .ShowcasePT1 {
+        margin: 1rem;
+        text-align: center;
+        height: fit-content;
+    }
+    .ShowcasePT2
+    {
+        margin-top: -1rem;
+        text-align: Left;
+        color: rgb(229, 85, 85);
+    }
+    .ShowcasePT2 h4
+    {
+        font-size: 1.5rem !important;
+    }
+    .SideImages {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .SideImages img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+        border-radius: 5px;
+    }
+    .RoadMapImageHolder
+    {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    
+    }
+    .ShowcasePT1 h2 {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    .DescriptionDiv {
+        display: flex;
+        gap: 1rem;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgb(54, 54, 54);
+        margin-bottom: -0.7rem;
+    }
+    .AFrameForm-1 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #7CD2C7;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .Quantity-Input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .AFrameForm-1-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .radio-inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: white;
+        margin-left: -1.8rem;
+    }
+    .radio-inputs>* {
+        margin: 6px;
+    }
+    .radio-input:checked+.radio-tile {
+        background-color: #7CD2C7;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+    .radio-input:checked+.radio-tile:before {
+        transform: scale(1);
+        opacity: 1;
+        background-color: #7CD2C7;
+        color: white;
+    }
+    .radio-input:checked+.radio-tile .radio-label {
+        color: white;
+    }
+    .radio-input:focus+.radio-tile {
+        background-color: #7CD2C7;
+        border-color: white;
+        color: white;
+    }
+    .radio-input:focus+.radio-tile:before {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .radio-tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        min-height: 80px;
+        border: 2px solid #7CD2C7;
+        background-color: #fff;
+        transition: 0.15s ease;
+        cursor: pointer;
+        position: relative;
+    }
+    .radio-tile:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0.75rem;
+        height: 0.75rem;
+        border: 2px solid #b5bfd9;
+        background-color: #fff;
+        border-radius: 50%;
+        top: 0.25rem;
+        left: 0.25rem;
+        opacity: 0;
+        transform: scale(0);
+        transition: 0.25s ease;
+    }
+    .radio-tile:hover {
+        border-color: #7CD2C7;
+    }
+    .radio-tile:hover:before {
+        transform: scale(1);
+        opacity: 1;
+    }
+    .radio-icon svg {
+        width: 2rem;
+        height: 2rem;
+        fill: #494949;
+    }
+    .radio-label {
+        color: black;
+        transition: 0.375s ease;
+        text-align: center;
+        font-size: 13px;
+    }
+    .radio-input {
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+    .radio-icons {
+        width: 2rem;
+        height: 2rem;
+    }
+    .radio-icons-2 {
+        width: 8rem;
+        height: 8rem;
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+    .ImagesWrapper
+    {
+    
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 3rem;        
+    }    
+    .ProductSideImages
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .ProductSideImages img
+    {
+        width: 20%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .ProductMainImage
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    #MainImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    #MainImage img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .RoadMapImageHolder
+    {
+        display: none;
+    }
+    .FAQHidden
+    {
+        display: none;
+    }
+}
