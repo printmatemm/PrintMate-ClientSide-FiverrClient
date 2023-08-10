@@ -11,6 +11,7 @@ export default function Dashboard() {
   const [readOrders, setReadOrders] = useState([]);
   const [view, setView] = useState('Not Contacted');
 
+
   useEffect(() => {
     if (!context.AdminLoggedIn) {
       navigate('/admin/login');
@@ -20,7 +21,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const uncontactedResponse = await fetch('http://localhost:4002/getUncontactedQuotations', {
+        const uncontactedResponse = await fetch(`${process.env.REACT_APP_API_URL}/getUncontactedQuotations`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -29,7 +30,7 @@ export default function Dashboard() {
         const uncontactedData = await uncontactedResponse.json();
         setUnReadOrders(uncontactedData.uncontactedQuotations);
 
-        const contactedResponse = await fetch('http://localhost:4002/getContactedQuotations', {
+        const contactedResponse = await fetch(`${process.env.REACT_APP_API_URL}/getContactedQuotations`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -42,10 +43,11 @@ export default function Dashboard() {
       }
     };
 
+    fetchData();
     const fetchDataInterval = setInterval(fetchData, 5000);
-
     return () => clearInterval(fetchDataInterval);
-  }, []);
+    }, []);
+
 
   return (
     <>

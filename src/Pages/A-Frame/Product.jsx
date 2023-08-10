@@ -504,7 +504,7 @@ export default function () {
 }
 
 const CallAPI = async (body) => {
-    const Response = await fetch('http://127.0.0.1:4002/addQuotation',{
+    const Response = await fetch(`${process.env.REACT_APP_API_URL}/addQuotation`,{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

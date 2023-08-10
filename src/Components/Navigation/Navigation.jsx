@@ -80,8 +80,6 @@ export default function Navigation() {
                         </div>
                     </>
                 }
-                {/* End of Desktop */}
-                {/* Mobile View */}
                 {(deviceType === 'tablet' || deviceType==="mobile") &&
                     <>
                         <div className="Navigation">
@@ -109,7 +107,6 @@ export default function Navigation() {
 
 
                                     <ListItem>
-                                        <h1 className="Company-Name">Print<span>Mate</span></h1>
                                     </ListItem>
 
                                     <div className='MobMenu'>

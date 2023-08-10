@@ -4,7 +4,7 @@ import { notification } from 'antd';
 const Display = ({ quotes }) => {
   const MarkContacted = async (id) => {
     try {
-      const response = await fetch('http://localhost:4002/MarkContacted', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/MarkContacted`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const Display = ({ quotes }) => {
 
   const DeleteQuote = async (id) => {
     try {
-      const response = await fetch('http://localhost:4002/DeleteQuote', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/DeleteQuote`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
