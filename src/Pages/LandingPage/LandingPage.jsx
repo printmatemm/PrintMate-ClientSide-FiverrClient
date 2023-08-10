@@ -1,13 +1,6 @@
 import React from 'react'
 import './styles.modules.css'
 import { Carousel } from 'antd';
-import MailOutlineSharpIcon from '@mui/icons-material/MailOutlineSharp';
-import PhonePausedOutlinedIcon from '@mui/icons-material/PhonePausedOutlined';
-import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Navigation from '../../Components/Navigation/Navigation';
 import Footer from '../../Components/Navigation/Footer';
 
@@ -18,7 +11,7 @@ export default function LandingPage() {
 
 
             <div className="Landing-Page-Cover">
-                <img src='/Cover.png' />
+                <img src='/Cover.png' alt="PrintMate"/>
             </div>
 
 
@@ -28,7 +21,7 @@ export default function LandingPage() {
                         <h1>PrintMate</h1>
                     </div>
                     <div className="carousel-section2">
-                        <img src="/BusinessCard.png" />
+                        <img src="/BusinessCard.png" alt="PrintMate"/>
                         <h2>Business Cards</h2>
                         <p>Unlock Your Professional Potential with Our Exquisite Business Cards!</p>
                         <ul>
@@ -49,7 +42,7 @@ export default function LandingPage() {
                         <h1>PrintMate</h1>
                     </div>
                     <div className="carousel-section2">
-                        <img src="/Books.png" />
+                        <img src="/Books.png" alt="PrintMate"/>
                         <h2>Books and Booklets</h2>
                         <p>Unlock the World of Knowledge with Our Enchanting Books and Booklets!</p>
                         <ul>
@@ -69,7 +62,7 @@ export default function LandingPage() {
                         <h1>PrintMate</h1>
                     </div>
                     <div className="carousel-section2">
-                        <img src="/Banner.png" />
+                        <img src="/Banner.png" alt="Mockup"/>
                         <h2>Banner</h2>
                         <p>Unleash Your Business's Potential with Our Captivating Banners</p>
                         <ul>
@@ -136,7 +129,7 @@ export default function LandingPage() {
 
             <div className="container grid" >
                 <div className="grid-1">
-                    <img src="/Grid/Flyer.png" />
+                    <img src="/Grid/Flyer.png" alt="Mockup"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div").style.display="block"
                     }}
@@ -150,7 +143,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="grid-1">
-                    <img src="/Grid/Business Card.png" />
+                    <img src="/Grid/Business Card.png" alt="PrintMate" />
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-2").style.display="block"
                     }}
@@ -164,7 +157,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="grid-1">
-                    <img src="/Grid/Poster.png" />
+                    <img src="/Grid/Poster.png" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-3").style.display="block"
                     }}
@@ -178,7 +171,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="grid-1">
-                    <img src="/Grid/Merch.png" />
+                    <img src="/Grid/Merch.png" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-4").style.display="block"
                     }}
@@ -192,7 +185,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="grid-1">
-                    <img src="/Grid/Stationary.png" />
+                    <img src="/Grid/Stationary.png" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-5").style.display="block"
                     }}
@@ -206,7 +199,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="grid-1">
-                    <img src="/Grid/Invites.png" />
+                    <img src="/Grid/Invites.png" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-6").style.display="block"
                     }}
@@ -220,7 +213,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="grid-1">
-                    <img src="/Grid/Calender.png" />
+                    <img src="/Grid/Calender.png"  alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-7").style.display="block"
                     }}
@@ -234,7 +227,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="grid-1">
-                    <img src="/Grid/Banners.jpg" />
+                    <img src="/Grid/Banners.jpg" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-8").style.display="block"
                     }}
@@ -279,7 +272,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="about-us-1">
-                    <img src="/Mockup.png" />
+                    <img src="/Mockup.png" alt="Mockup" />
                 </div>
 
             </div>

@@ -3,21 +3,16 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
 import MailOutlineSharpIcon from '@mui/icons-material/MailOutlineSharp';
 import PhonePausedOutlinedIcon from '@mui/icons-material/PhonePausedOutlined';
 import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
-import { Link, useNavigate } from 'react-router-dom';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
+import { Link  } from 'react-router-dom';
 
 import './styles.modules.css';
 
 export default function Navigation() {
-    const Navigate = useNavigate();
     const [deviceType, setDeviceType] = useState('laptop');
     const [open, setOpen] = useState(false);
 

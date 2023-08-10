@@ -111,7 +111,7 @@ const ProductGrid = (props) => {
 
   const handleClick = () => {
     ProductContext.SetProduct(props.TempProduct)
-    navigate('/A-Frame/Product')
+    navigate('/Product')
   };
   return (
     <>
