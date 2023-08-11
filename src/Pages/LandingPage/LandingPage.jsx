@@ -3,8 +3,10 @@ import './styles.modules.css'
 import { Carousel } from 'antd';
 import Navigation from '../../Components/Navigation/Navigation';
 import Footer from '../../Components/Navigation/Footer';
+import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
+    const Navigate = useNavigate();
     return (
         <>
             <Navigation />
@@ -25,16 +27,15 @@ export default function LandingPage() {
                         <h2>Business Cards</h2>
                         <p>Unlock Your Professional Potential with Our Exquisite Business Cards!</p>
                         <ul>
-                            <li>Economy Business Cards</li>
-                            <li>Folded Business Cards</li>
-                            <li>Gloss Business Cards</li>
-                            <li>Loyalty Cards</li>
-                            <li>Many more..</li>
+                            <li>🌟 Elevate Your Brand Identity 🌟</li>
+                            <li>🎨 Customization at Your Fingertips 🎨</li>
+                            <li>📐 Precision Printing for Perfection 📐</li>
+                            <li>🚀 Fast Turnaround, Seamless Process 🚀</li>
+                            <li>And many more..</li>
                         </ul>
                         <div className='carousel-btn'>
                             <button>Shop Business Cards</button>
                         </div>
-
                     </div>
                 </div>
                 <div className="container my-5" id="carousel">
@@ -46,11 +47,11 @@ export default function LandingPage() {
                         <h2>Books and Booklets</h2>
                         <p>Unlock the World of Knowledge with Our Enchanting Books and Booklets!</p>
                         <ul>
-                            <li>Deskpads</li>
-                            <li>Stapled Booklets</li>
-                            <li>Perfect Bound Booklets</li>
-                            <li>Wire Bound Booklets</li>
-                            <li>Many more..</li>
+                            <li>📘 Transform Ideas into Art 📘</li>
+                            <li>🎨 Customization that Speaks Volumes 🎨</li>
+                            <li>📚 Quality Printing for Every Page 📚</li>
+                            <li>📚 Your Words, Our Craftsmanship 📚</li>
+                            <li>And many more..</li>
                         </ul>
                         <div className='carousel-btn'>
                             <button>Shop Books and Booklets</button>
@@ -66,16 +67,15 @@ export default function LandingPage() {
                         <h2>Banner</h2>
                         <p>Unleash Your Business's Potential with Our Captivating Banners</p>
                         <ul>
-                            <li>Exhibition Popups</li>
-                            <li>Flags</li>
-                            <li>PVC Banners</li>
-                            <li>Roller Banners</li>
-                            <li>Many more..</li>
+                            <li>🎨 Vibrant Visuals, Bigger Impact 🎨</li>
+                            <li>🔍 Customization for Every Occasion 🔍</li>
+                            <li>🌟 Quality that Stands Tall 🌟</li>
+                            <li>🚀 Fast Turnaround, Seamless Process 🚀</li>
+                            <li>And many more..</li>
                         </ul>
                         <div className='carousel-btn'>
                             <button>Shop Banners</button>
                         </div>
-        
                     </div>
                 </div>
                 </Carousel>
@@ -128,7 +128,10 @@ export default function LandingPage() {
             </div>
 
             <div className="container grid" >
-                <div className="grid-1">
+                <div className="grid-1" onClick={()=>{
+                    Navigate('/Product/Flyers')
+                }}
+                >
                     <img src="/Grid/Flyer.png" alt="Mockup"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div").style.display="block"
@@ -142,7 +145,9 @@ export default function LandingPage() {
                         <h6>Shop Now</h6>
                     </div>
                 </div>
-                <div className="grid-1">
+                <div className="grid-1" onClick={()=>{
+                    Navigate('/Product/Business-Cards')
+                }}>
                     <img src="/Grid/Business Card.png" alt="PrintMate" />
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-2").style.display="block"
@@ -156,7 +161,9 @@ export default function LandingPage() {
                         <h6>Shop Now</h6>
                     </div>
                 </div>
-                <div className="grid-1">
+                <div className="grid-1" onClick={()=>{
+                    Navigate('/Product/Posters')
+                }}>
                     <img src="/Grid/Poster.png" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-3").style.display="block"
@@ -170,7 +177,9 @@ export default function LandingPage() {
                         <h6>Shop Now</h6>
                     </div>
                 </div>
-                <div className="grid-1">
+                <div className="grid-1" onClick={()=>{
+                    Navigate('/Product/Merchandise')
+                }}>
                     <img src="/Grid/Merch.png" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-4").style.display="block"
@@ -184,7 +193,9 @@ export default function LandingPage() {
                         <h6>Shop Now</h6>
                     </div>
                 </div>
-                <div className="grid-1">
+                <div className="grid-1" onClick={()=>{
+                    Navigate('/Product/Business-Stationery')
+                }}>
                     <img src="/Grid/Stationary.png" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-5").style.display="block"
@@ -198,7 +209,9 @@ export default function LandingPage() {
                         <h6>Shop Now</h6>
                     </div>
                 </div>
-                <div className="grid-1">
+                <div className="grid-1" onClick={()=>{
+                    Navigate('/Product/Cards')
+                }}>
                     <img src="/Grid/Invites.png" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-6").style.display="block"
@@ -212,7 +225,9 @@ export default function LandingPage() {
                         <h6>Shop Now</h6>
                     </div>
                 </div>
-                <div className="grid-1">
+                <div className="grid-1" onClick={()=>{
+                    Navigate('/Product/Calenders')
+                }}>
                     <img src="/Grid/Calender.png"  alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-7").style.display="block"
@@ -226,7 +241,9 @@ export default function LandingPage() {
                         <h6>Shop Now</h6>
                     </div>
                 </div>
-                <div className="grid-1">
+                <div className="grid-1" onClick={()=>{
+                    Navigate('/Product/Banners')}
+                }>
                     <img src="/Grid/Banners.jpg" alt="PrintMate"/>
                     <div className="grid-1div" onMouseEnter={()=>{
                         document.getElementById("Flyer-Div-8").style.display="block"
