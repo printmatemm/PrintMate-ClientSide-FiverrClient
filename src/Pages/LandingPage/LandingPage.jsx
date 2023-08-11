@@ -130,7 +130,7 @@ export default function LandingPage() {
 
             <div className="Grid-Wrapper">
                 <div className="container my-5">
-                    <h2>High Quality Online Printing Services</h2>
+                    <h2><span className="spanning">High Quality</span> Online Printing Services</h2>
                 </div>
 
                 <div className="container grid" >
@@ -163,7 +163,7 @@ export default function LandingPage() {
                             }}
                         >
                             <h5>Business Card</h5>
-                            <p id="Flyer-Div-2">Promote your business with high quality flyers!</p>
+                            <p id="Flyer-Div-2">Promote your business with high quality business cards!</p>
                             <h6>Shop Now</h6>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ export default function LandingPage() {
                             }}
                         >
                             <h5>Posters</h5>
-                            <p id="Flyer-Div-3">Promote your business with high quality flyers!</p>
+                            <p id="Flyer-Div-3">Promote your business with high quality posters!</p>
                             <h6>Shop Now</h6>
                         </div>
                     </div>
@@ -187,7 +187,7 @@ export default function LandingPage() {
                         Navigate('/Product/Merchandise')
                     }}>
                         <img src="/Grid/Merch.png" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-x" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-4").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -195,7 +195,7 @@ export default function LandingPage() {
                             }}
                         >
                             <h5>Merchandise</h5>
-                            <p id="Flyer-Div-4">Promote your business with high quality flyers!</p>
+                            <p id="Flyer-Div-4">Promote your business with high quality merchandise!</p>
                             <h6>Shop Now</h6>
                         </div>
                     </div>
@@ -211,7 +211,7 @@ export default function LandingPage() {
                             }}
                         >
                             <h5>Business Stationery</h5>
-                            <p id="Flyer-Div-5">Promote your business with high quality flyers!</p>
+                            <p id="Flyer-Div-5">Promote your business with high quality stationery!</p>
                             <h6>Shop Now</h6>
                         </div>
                     </div>
@@ -227,7 +227,7 @@ export default function LandingPage() {
                             }}
                         >
                             <h5>Cards & Invites</h5>
-                            <p id="Flyer-Div-6">Promote your business with high quality flyers!</p>
+                            <p id="Flyer-Div-6">Promote your business with high quality cards and invites!</p>
                             <h6>Shop Now</h6>
                         </div>
                     </div>
@@ -243,7 +243,7 @@ export default function LandingPage() {
                             }}
                         >
                             <h5>Calenders</h5>
-                            <p id="Flyer-Div-7">Promote your business with high quality flyers!</p>
+                            <p id="Flyer-Div-7">Promote your business with high quality calenders!</p>
                             <h6>Shop Now</h6>
                         </div>
                     </div>
@@ -252,7 +252,7 @@ export default function LandingPage() {
                     }
                     }>
                         <img src="/Grid/Banners.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-x" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-8").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -260,7 +260,7 @@ export default function LandingPage() {
                             }}
                         >
                             <h5>Banners</h5>
-                            <p id="Flyer-Div-8">Promote your business with high quality flyers!</p>
+                            <p id="Flyer-Div-8">Promote your business with high quality banners!</p>
                             <h6>Shop Now</h6>
                         </div>
                     </div>

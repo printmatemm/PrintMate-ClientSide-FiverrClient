@@ -37,11 +37,9 @@ export default function Login() {
                 description : 'Welcome to PrintMate',
                 placement : 'topRight',
                 duration : 2,
-                onClose : () => {
-                    Navigate('/admin/dashboard')
-                }
             })
             Context1.SetAdminLoggedIn(true)
+            Navigate('/admin/dashboard')
         }else{
             notification.error({
                 message : 'Login Failed',

@@ -56,7 +56,7 @@ export default function AllProducts() {
                         Navigate('/Product/Merchandise')
                     }}>
                         <img src="/Grid/Merch.png" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-x" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-4").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -72,7 +72,7 @@ export default function AllProducts() {
                         Navigate('/Product/Cards')
                     }}>
                         <img src="/Grid/Invites.png" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-6").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -121,7 +121,7 @@ export default function AllProducts() {
                         Navigate('/Product/Folded-Leaflets')
                     }}>
                         <img src="/FoldedLeaflets/FoldedLeaflets-Product1.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-13").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -137,7 +137,7 @@ export default function AllProducts() {
                         Navigate('/Product/Menus')
                     }}>
                         <img src="/Menus/Menus-Product1.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-14").style.display = "block"
                         }}
                             onMouseLeave={() => {

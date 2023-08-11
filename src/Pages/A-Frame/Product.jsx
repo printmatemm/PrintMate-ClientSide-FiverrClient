@@ -47,17 +47,17 @@ export default function () {
     const items = [
         {
             key: '1',
-            label: 'What if I don’t have a fold out business card design?',
-            children: <p>"No design? No problem! We have a wealth of templates available for you to use. We Will get in touch and provide you with suggestions"</p>,
+            label: 'What if I don’t have a design?',
+            children: "No design? No problem! We have a wealth of templates available for you to use. We Will get in touch and provide you with suggestions",
         },
         {
             key: '2',
             label: 'How are they printed?',
-            children: 'Your artwork goes on an incredible journey here at the instantprint headquarters; from arriving with our quality check team to being passed down to the printing room. We have a dedicated business card room in our production facility where all our fold out business cards are printed on our Fujifilm Jet Press.',
+            children: 'Your artwork goes on an incredible journey here at the PrintMate headquarters; from arriving with our quality check team to being passed down to the printing room. We have a dedicated business card room in our production facility where all our fold out business cards are printed on our Fujifilm Jet Press.',
         },
         {
             key: '3',
-            label: 'When will my business cards be delivered?',
+            label: 'When will my product be delivered?',
             children: 'We offer a range of delivery options to suit your needs. Our standard delivery is free and takes 3-5 working days, while our express delivery takes 1-2 working days and costs £4.99. Once your order has been dispatched, you can track your order on your account page.'
         },
     ];

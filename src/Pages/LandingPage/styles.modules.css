@@ -334,6 +334,7 @@
     display: inline-block;
     width: 100%;
     height: 100%;
+    box-shadow: 0px 0px 10px 0px #d3f3ef;
 
 }
 .grid-1 img
@@ -349,7 +350,7 @@
     position: absolute;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
+    background-color: white !important;
     padding: 10px;
     top: 91%;
     left: 50%;
@@ -363,6 +364,47 @@
     left: 50%;
     width: 100%;
     height: 50%;
+    overflow: hidden;
+}
+.grid-1div-x {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white !important;
+    padding: 10px;
+    top: 91%;
+    left: 50%;
+    width: 101%;
+    height: 20%;
+    transition-duration: 1s;
+    padding: 1rem;
+}
+.grid-1div-x:hover{
+    top: 75%;
+    left: 50%;
+    width: 101%;
+    height: 50%;
+    overflow: hidden;
+}
+.grid-1div-y {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white !important;
+    padding: 10px;
+    top: 91%;
+    left: 50%;
+    width: 101%;
+    height: 20%;
+    transition-duration: 1s;
+    padding: 1rem;
+}
+.grid-1div-y:hover{
+    top: 75%;
+    left: 50%;
+    width: 101%;
+    height: 50%;
+    overflow: hidden;
 }
 
 .grid-1 h5 {
@@ -381,6 +423,20 @@
 }
 
 .grid-1div p{
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+}
+.grid-1div-x p{
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+}
+.grid-1div-y p{
     display: none;
     font-size: 14px;
     font-weight: 500;
@@ -485,6 +541,10 @@
     transition-duration: 1s ease-in;
     margin-bottom: 1rem;
 }
+.spanning
+{
+    color: rgb(226, 98, 98);
+}
 .about-btn button:hover
 {
     border: 1px solid #7cd2c7;
@@ -515,6 +575,10 @@
 
 
 @media (max-width:480px){
+    .Landing-Page-Cover
+    {
+        margin-top: -4.5rem !important;
+    }
     .Company-Name
     {
         font-size: 2rem !important; 
@@ -581,12 +645,12 @@
     }
     .Landing-Page-Cover img {
 
-        height: 90vh !important;
+        height: 100vh !important;
         object-fit: cover;
     }
     .ourselves
     {
-        margin-top: 1rem !important;
+        margin-top: 4rem !important;
     }
     .ourselves-inner {
         grid-template-columns: 100% !important;
@@ -616,6 +680,19 @@
         width: 100% !important;
         height: 50% !important;
     }
+    .grid-1div-x {
+        top: 83% !important;
+        left: 50% !important;
+        width: 100% !important;
+        height: 35% !important;
+    }
+    .grid-1div-y {
+        top: 87.5% !important;
+        left: 50% !important;
+        width: 100% !important;
+        height: 25% !important;
+    }
+
     .grid-1 h5 {
         font-size: 23px !important;
     }
@@ -659,6 +736,9 @@
         width: 80% !important;
         margin-right: 0rem !important;
         margin-bottom: 0.5rem !important;
+    }
+    .grid-1 {
+        border: 2px solid #3bafb3;
     }
 
 }

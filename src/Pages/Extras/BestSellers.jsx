@@ -56,7 +56,7 @@ export default function AllProducts() {
                     }
                     }>
                         <img src="/Grid/Banners.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-8").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -72,7 +72,7 @@ export default function AllProducts() {
                         Navigate('/Product/Cardboard Signs')
                     }}>
                         <img src="/Cardboard-Signs/CardboardSigns-Product2.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-10").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -88,7 +88,7 @@ export default function AllProducts() {
                         Navigate('/Product/Folded-Leaflets')
                     }}>
                         <img src="/FoldedLeaflets/FoldedLeaflets-Product1.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-13").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -105,7 +105,7 @@ export default function AllProducts() {
                         Navigate('/Product/Stickers-and-Labels')
                     }}>
                         <img src="/Stickers/Stickers-Product1.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-16").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -122,7 +122,7 @@ export default function AllProducts() {
                         Navigate('/Product/Menus')
                     }}>
                         <img src="/Menus/Menus-Product1.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-14").style.display = "block"
                         }}
                             onMouseLeave={() => {
@@ -140,7 +140,7 @@ export default function AllProducts() {
                         Navigate('/Product/Correx')
                     }}>
                         <img src="/Correx/Correx-Product1.jpg" alt="PrintMate" />
-                        <div className="grid-1div" onMouseEnter={() => {
+                        <div className="grid-1div-y" onMouseEnter={() => {
                             document.getElementById("Flyer-Div-11").style.display = "block"
                         }}
                             onMouseLeave={() => {
