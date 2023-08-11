@@ -13,7 +13,7 @@ export default function LandingPage() {
 
 
             <div className="Landing-Page-Cover">
-                <img src='/Cover.png' alt="PrintMate"/>
+                <img src='/Cover.png' alt="PrintMate" />
             </div>
 
 
@@ -23,7 +23,7 @@ export default function LandingPage() {
                         <h1>PrintMate</h1>
                     </div>
                     <div className="carousel-section2">
-                        <img src="/BusinessCard.png" alt="PrintMate"/>
+                        <img src="/BusinessCard.png" alt="PrintMate" />
                         <h2>Business Cards</h2>
                         <p>Unlock Your Professional Potential with Our Exquisite Business Cards!</p>
                         <ul>
@@ -34,7 +34,9 @@ export default function LandingPage() {
                             <li>And many more..</li>
                         </ul>
                         <div className='carousel-btn'>
-                            <button>Shop Business Cards</button>
+                            <button onClick={()=>{
+                                Navigate('/Product/Business-Cards')}}>
+                                    Shop Business Cards</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +45,7 @@ export default function LandingPage() {
                         <h1>PrintMate</h1>
                     </div>
                     <div className="carousel-section2">
-                        <img src="/Books.png" alt="PrintMate"/>
+                        <img src="/Books.png" alt="PrintMate" />
                         <h2>Books and Booklets</h2>
                         <p>Unlock the World of Knowledge with Our Enchanting Books and Booklets!</p>
                         <ul>
@@ -54,7 +56,8 @@ export default function LandingPage() {
                             <li>And many more..</li>
                         </ul>
                         <div className='carousel-btn'>
-                            <button>Shop Books and Booklets</button>
+                        <button onClick={()=>{
+                            Navigate('/Product/Books-and-Booklets')}}>Shop Books and Booklets</button>
                         </div>
                     </div>
                 </div>
@@ -63,7 +66,7 @@ export default function LandingPage() {
                         <h1>PrintMate</h1>
                     </div>
                     <div className="carousel-section2">
-                        <img src="/Banner.png" alt="Mockup"/>
+                        <img src="/Banner.png" alt="Mockup" />
                         <h2>Banner</h2>
                         <p>Unleash Your Business's Potential with Our Captivating Banners</p>
                         <ul>
@@ -74,11 +77,14 @@ export default function LandingPage() {
                             <li>And many more..</li>
                         </ul>
                         <div className='carousel-btn'>
-                            <button>Shop Banners</button>
+                            <button onClick={()=>{
+                                Navigate('/Product/Banners')
+                            }}
+                            >Shop Banners</button>
                         </div>
                     </div>
                 </div>
-                </Carousel>
+            </Carousel>
 
             <div className="ourselves">
                 <div className="container ourselves-inner">
@@ -123,144 +129,145 @@ export default function LandingPage() {
 
 
             <div className="Grid-Wrapper">
-            <div className="container my-5">
-                <h2>High Quality Online Printing Services</h2>
-            </div>
+                <div className="container my-5">
+                    <h2>High Quality Online Printing Services</h2>
+                </div>
 
-            <div className="container grid" >
-                <div className="grid-1" onClick={()=>{
-                    Navigate('/Product/Flyers')
-                }}
-                >
-                    <img src="/Grid/Flyer.png" alt="Mockup"/>
-                    <div className="grid-1div" onMouseEnter={()=>{
-                        document.getElementById("Flyer-Div").style.display="block"
-                    }}
-                    onMouseLeave={()=>{
-                        document.getElementById("Flyer-Div").style.display="none"
+                <div className="container grid" >
+                    <div className="grid-1" onClick={() => {
+                        Navigate('/Product/Flyers')
                     }}
                     >
-                        <h5>Flyer</h5>
-                        <p id="Flyer-Div">Promote your business with high quality flyers!</p>
-                        <h6>Shop Now</h6>
+                        <img src="/Grid/Flyer.png" alt="Mockup" />
+                        <div className="grid-1div" onMouseEnter={() => {
+                            document.getElementById("Flyer-Div").style.display = "block"
+                        }}
+                            onMouseLeave={() => {
+                                document.getElementById("Flyer-Div").style.display = "none"
+                            }}
+                        >
+                            <h5>Flyer</h5>
+                            <p id="Flyer-Div">Promote your business with high quality flyers!</p>
+                            <h6>Shop Now</h6>
+                        </div>
                     </div>
-                </div>
-                <div className="grid-1" onClick={()=>{
-                    Navigate('/Product/Business-Cards')
-                }}>
-                    <img src="/Grid/Business Card.png" alt="PrintMate" />
-                    <div className="grid-1div" onMouseEnter={()=>{
-                        document.getElementById("Flyer-Div-2").style.display="block"
-                    }}
-                    onMouseLeave={()=>{
-                        document.getElementById("Flyer-Div-2").style.display="none"
-                    }}
-                    >
-                        <h5>Business Card</h5>
-                        <p id="Flyer-Div-2">Promote your business with high quality flyers!</p>
-                        <h6>Shop Now</h6>
+                    <div className="grid-1" onClick={() => {
+                        Navigate('/Product/Business-Cards')
+                    }}>
+                        <img src="/Grid/Business Card.png" alt="PrintMate" />
+                        <div className="grid-1div" onMouseEnter={() => {
+                            document.getElementById("Flyer-Div-2").style.display = "block"
+                        }}
+                            onMouseLeave={() => {
+                                document.getElementById("Flyer-Div-2").style.display = "none"
+                            }}
+                        >
+                            <h5>Business Card</h5>
+                            <p id="Flyer-Div-2">Promote your business with high quality flyers!</p>
+                            <h6>Shop Now</h6>
+                        </div>
                     </div>
-                </div>
-                <div className="grid-1" onClick={()=>{
-                    Navigate('/Product/Posters')
-                }}>
-                    <img src="/Grid/Poster.png" alt="PrintMate"/>
-                    <div className="grid-1div" onMouseEnter={()=>{
-                        document.getElementById("Flyer-Div-3").style.display="block"
-                    }}
-                    onMouseLeave={()=>{
-                        document.getElementById("Flyer-Div-3").style.display="none"
-                    }}
-                    >
-                        <h5>Posters</h5>
-                        <p id="Flyer-Div-3">Promote your business with high quality flyers!</p>
-                        <h6>Shop Now</h6>
+                    <div className="grid-1" onClick={() => {
+                        Navigate('/Product/Posters')
+                    }}>
+                        <img src="/Grid/Poster.png" alt="PrintMate" />
+                        <div className="grid-1div" onMouseEnter={() => {
+                            document.getElementById("Flyer-Div-3").style.display = "block"
+                        }}
+                            onMouseLeave={() => {
+                                document.getElementById("Flyer-Div-3").style.display = "none"
+                            }}
+                        >
+                            <h5>Posters</h5>
+                            <p id="Flyer-Div-3">Promote your business with high quality flyers!</p>
+                            <h6>Shop Now</h6>
+                        </div>
                     </div>
-                </div>
-                <div className="grid-1" onClick={()=>{
-                    Navigate('/Product/Merchandise')
-                }}>
-                    <img src="/Grid/Merch.png" alt="PrintMate"/>
-                    <div className="grid-1div" onMouseEnter={()=>{
-                        document.getElementById("Flyer-Div-4").style.display="block"
-                    }}
-                    onMouseLeave={()=>{
-                        document.getElementById("Flyer-Div-4").style.display="none"
-                    }}
-                    >
-                        <h5>Merchandise</h5>
-                        <p id="Flyer-Div-4">Promote your business with high quality flyers!</p>
-                        <h6>Shop Now</h6>
+                    <div className="grid-1" onClick={() => {
+                        Navigate('/Product/Merchandise')
+                    }}>
+                        <img src="/Grid/Merch.png" alt="PrintMate" />
+                        <div className="grid-1div" onMouseEnter={() => {
+                            document.getElementById("Flyer-Div-4").style.display = "block"
+                        }}
+                            onMouseLeave={() => {
+                                document.getElementById("Flyer-Div-4").style.display = "none"
+                            }}
+                        >
+                            <h5>Merchandise</h5>
+                            <p id="Flyer-Div-4">Promote your business with high quality flyers!</p>
+                            <h6>Shop Now</h6>
+                        </div>
                     </div>
-                </div>
-                <div className="grid-1" onClick={()=>{
-                    Navigate('/Product/Business-Stationery')
-                }}>
-                    <img src="/Grid/Stationary.png" alt="PrintMate"/>
-                    <div className="grid-1div" onMouseEnter={()=>{
-                        document.getElementById("Flyer-Div-5").style.display="block"
-                    }}
-                    onMouseLeave={()=>{
-                        document.getElementById("Flyer-Div-5").style.display="none"
-                    }}
-                    >
-                        <h5>Business Stationery</h5>
-                        <p id="Flyer-Div-5">Promote your business with high quality flyers!</p>
-                        <h6>Shop Now</h6>
+                    <div className="grid-1" onClick={() => {
+                        Navigate('/Product/Business-Stationery')
+                    }}>
+                        <img src="/Grid/Stationary.png" alt="PrintMate" />
+                        <div className="grid-1div" onMouseEnter={() => {
+                            document.getElementById("Flyer-Div-5").style.display = "block"
+                        }}
+                            onMouseLeave={() => {
+                                document.getElementById("Flyer-Div-5").style.display = "none"
+                            }}
+                        >
+                            <h5>Business Stationery</h5>
+                            <p id="Flyer-Div-5">Promote your business with high quality flyers!</p>
+                            <h6>Shop Now</h6>
+                        </div>
                     </div>
-                </div>
-                <div className="grid-1" onClick={()=>{
-                    Navigate('/Product/Cards')
-                }}>
-                    <img src="/Grid/Invites.png" alt="PrintMate"/>
-                    <div className="grid-1div" onMouseEnter={()=>{
-                        document.getElementById("Flyer-Div-6").style.display="block"
-                    }}
-                    onMouseLeave={()=>{
-                        document.getElementById("Flyer-Div-6").style.display="none"
-                    }}
-                    >
-                        <h5>Cards & Invites</h5>
-                        <p id="Flyer-Div-6">Promote your business with high quality flyers!</p>
-                        <h6>Shop Now</h6>
+                    <div className="grid-1" onClick={() => {
+                        Navigate('/Product/Cards')
+                    }}>
+                        <img src="/Grid/Invites.png" alt="PrintMate" />
+                        <div className="grid-1div" onMouseEnter={() => {
+                            document.getElementById("Flyer-Div-6").style.display = "block"
+                        }}
+                            onMouseLeave={() => {
+                                document.getElementById("Flyer-Div-6").style.display = "none"
+                            }}
+                        >
+                            <h5>Cards & Invites</h5>
+                            <p id="Flyer-Div-6">Promote your business with high quality flyers!</p>
+                            <h6>Shop Now</h6>
+                        </div>
                     </div>
-                </div>
-                <div className="grid-1" onClick={()=>{
-                    Navigate('/Product/Calenders')
-                }}>
-                    <img src="/Grid/Calender.png"  alt="PrintMate"/>
-                    <div className="grid-1div" onMouseEnter={()=>{
-                        document.getElementById("Flyer-Div-7").style.display="block"
-                    }}
-                    onMouseLeave={()=>{
-                        document.getElementById("Flyer-Div-7").style.display="none"
-                    }}
-                    >
-                        <h5>Calenders</h5>
-                        <p id="Flyer-Div-7">Promote your business with high quality flyers!</p>
-                        <h6>Shop Now</h6>
+                    <div className="grid-1" onClick={() => {
+                        Navigate('/Product/Calenders')
+                    }}>
+                        <img src="/Grid/Calender.png" alt="PrintMate" />
+                        <div className="grid-1div" onMouseEnter={() => {
+                            document.getElementById("Flyer-Div-7").style.display = "block"
+                        }}
+                            onMouseLeave={() => {
+                                document.getElementById("Flyer-Div-7").style.display = "none"
+                            }}
+                        >
+                            <h5>Calenders</h5>
+                            <p id="Flyer-Div-7">Promote your business with high quality flyers!</p>
+                            <h6>Shop Now</h6>
+                        </div>
                     </div>
-                </div>
-                <div className="grid-1" onClick={()=>{
-                    Navigate('/Product/Banners')}
-                }>
-                    <img src="/Grid/Banners.jpg" alt="PrintMate"/>
-                    <div className="grid-1div" onMouseEnter={()=>{
-                        document.getElementById("Flyer-Div-8").style.display="block"
-                    }}
-                    onMouseLeave={()=>{
-                        document.getElementById("Flyer-Div-8").style.display="none"
-                    }}
-                    >
-                        <h5>Banners</h5>
-                        <p id="Flyer-Div-8">Promote your business with high quality flyers!</p>
-                        <h6>Shop Now</h6>
+                    <div className="grid-1" onClick={() => {
+                        Navigate('/Product/Banners')
+                    }
+                    }>
+                        <img src="/Grid/Banners.jpg" alt="PrintMate" />
+                        <div className="grid-1div" onMouseEnter={() => {
+                            document.getElementById("Flyer-Div-8").style.display = "block"
+                        }}
+                            onMouseLeave={() => {
+                                document.getElementById("Flyer-Div-8").style.display = "none"
+                            }}
+                        >
+                            <h5>Banners</h5>
+                            <p id="Flyer-Div-8">Promote your business with high quality flyers!</p>
+                            <h6>Shop Now</h6>
+                        </div>
                     </div>
-                </div>
-                
 
 
-            </div>
+
+                </div>
 
             </div>
 
@@ -295,9 +302,9 @@ export default function LandingPage() {
             </div>
 
 
-            <Footer/>
+            <Footer />
 
-            
+
         </>
     )
 }

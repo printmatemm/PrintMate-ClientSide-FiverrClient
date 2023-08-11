@@ -8,11 +8,12 @@ import Divider from '@mui/material/Divider';
 import MailOutlineSharpIcon from '@mui/icons-material/MailOutlineSharp';
 import PhonePausedOutlinedIcon from '@mui/icons-material/PhonePausedOutlined';
 import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './styles.modules.css';
 
 export default function Navigation() {
+    const Navigate = useNavigate()
     const [deviceType, setDeviceType] = useState('laptop');
     const [open, setOpen] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
@@ -288,24 +289,26 @@ export default function Navigation() {
                                     <MailOutlineSharpIcon id="Icon" />
                                     <div className="Navigation-Icons-Text">
                                         <h6><b>Email Address</b></h6>
-                                        <h6>printmate@gmail.com</h6>
+                                        <h6>mansoor@printmate.uk</h6>
                                     </div>
                                 </div>
                                 <div className="Navigation-Icons">
                                     <PhonePausedOutlinedIcon id="Icon" />
                                     <div className="Navigation-Icons-Text">
                                         <h6><b>Phone Number</b></h6>
-                                        <h6>+92 123 456 789</h6>
+                                        <h6>01908 915388</h6>
                                     </div>
                                 </div>
                                 <div className="Navigation-Icons">
                                     <BusinessOutlinedIcon id="Icon" />
                                     <div className="Navigation-Icons-Text">
                                         <h6><b>Address</b></h6>
-                                        <h6>123, ABC Street, XYZ City</h6>
+                                        <h6>21 Radcliffe Street, Wolverton, Milton Keynes, MK12 5DQ</h6>
                                     </div>
                                 </div>
-                                <div className="Navigation-Button">
+                                <div className="Navigation-Button" onClick={()=>{
+                                    Navigate('/All-Products')
+                                }}>
                                     Get Quote
                                 </div>
                             </div>
@@ -384,21 +387,21 @@ export default function Navigation() {
                                             }} />
                                             <div className="Navigation-Icons-Text">
                                                 <h4><b>Email Address</b></h4>
-                                                <h4>printmate@gmail.com</h4>
+                                                <h4>mansoor@printmate.uk</h4>
                                             </div>
                                         </div>
                                         <div className="Navigation-Icons">
                                             <PhonePausedOutlinedIcon id="Icon" />
                                             <div className="Navigation-Icons-Text">
                                                 <h4><b>Phone Number</b></h4>
-                                                <h5>+92 123 456 789</h5>
+                                                <h5>01908 915388</h5>
                                             </div>
                                         </div>
                                         <div className="Navigation-Icons">
                                             <BusinessOutlinedIcon id="Icon" />
                                             <div className="Navigation-Icons-Text">
                                                 <h4><b>Address</b></h4>
-                                                <h5>123, ABC Street, XYZ City</h5>
+                                                <h5>21 Radcliffe Street, Wolverton, Milton Keynes, MK12 5DQ</h5>
                                             </div>
                                         </div>
                                     </div>

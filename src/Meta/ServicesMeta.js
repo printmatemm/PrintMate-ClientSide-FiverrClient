@@ -2,7 +2,7 @@ const ServicesMeta = [
     {
         ID: "A-Frame",
         Name: "A Frame Sign Printing",
-        CoverDescription: "Our A Frame signs are a great way to advertise your business. They are portable and can be used both indoors and outdoors. They are made of durable material and are weather resistant. They are easy to set up and take down. They are also easy to store. They are a great way to advertise your business",
+        CoverDescription: "If you're looking for a cost-effective way to grab the attention of passers-by, look no further than our brushed aluminium A-frames. Ideal for promoting new products, offers and campaigns or for steering potential customers to your location, each frame comes with two pre-fitted graphics printed onto great quality weatherproof PVC stock. Choose from 5 sizes, A2 to A0, and stand them outside your establishment for immediate impact. Our affordable custom printing services cater to businesses of all sizes.",
         CoverImage: "/AFrames/AFrame-Cover.png",
         CoverImageAlt: "A Frame Sign Printing",
         ProductID: "A-Frame-Products",
@@ -11,10 +11,8 @@ const ServicesMeta = [
             {
                 Question: "How to Make an A-Frame Sign?",
                 Answers: [
-                    "An A-frame board is essentially a double-sided poster frame than stands outside a shop or business to drive traffic inside. That means the only thing you’ll need to design is the poster!",
-                    "First things first, you’ll need to choose one of the sizes we offer; either A2 poster frames or A0 if you want a really large poster frame!",
-                    "Then, make your poster design to the size you’ve chosen. Make sure you add 3mm bleed area to each side to account for the bleed area and remember than a very slight area (around 10mm on each side) around the edges of the poster won’t be visible when it’s attached to the frame – just keep your main message central!",
-                    "The same poster is used on both sides of the A-frame sign so you only need one design. If you want to switch up or change your posters, you don’t need to order another A-frame – just order a new set of 220mic PVC posters to replace them.",
+                    "An A-frame board is a double-sided poster frame that stands outside a shop or business to drive traffic inside. That means the only thing you'll need to design is the poster!.",
+                    "Experience fast online printing with our streamlined ordering process. Get your personalised stationery at discounted rates for a professional touch."
                 ]
             },
             {
@@ -29,7 +27,7 @@ const ServicesMeta = [
     {
         ID: "Business-Cards",
         Name: "Business Cards Printing",
-        CoverDescription: "Crafting the perfect business cards is essential for leaving a lasting and positive impression, setting the stage for successful company-client relationships. Additionally, they serve as a powerful tool for relaunching your freelance enterprise. Whether you distribute them to clients or include them in packages to drive repeat business, our diverse array of unparalleled materials, distinctive dimensions, captivating textures, and, to add the finishing touch, complimentary templates for your personalized business cards make the process effortless.",
+        CoverDescription: "The right business cards can make a long-lasting and positive impression and often be the starting point for a fruitful company or customer relationship. They're also a fantastic tool for re-launching your freelance business. Whether you leave them with customers or post them in packaging to encourage repeat business, we've made it simple with our range of incomparable stocks, unique sizes, stunning finishes and – to top it off – free templates for your custom business cards.Combine our 450gsm silk premium business cards with matt lamination for a standout and popular choice, or choose a square option for something different and creative. Our print design services include a range of colour printing options.",
         CoverImage: "/BusinessCards/BusinessCard-Cover.png",
         CoverImageAlt: "Business Cards Printing",
         ProductID: "BusinessCard-Products",
@@ -60,7 +58,7 @@ const ServicesMeta = [
     {
         ID: "Calenders",
         Name: "Custom Calendar Printing",
-        CoverDescription: "Elevate your daily routine with our personalized calendars that are designed to keep you on track and make a lasting impression. Whether you're aiming for a polished look in your office space with wall calendars or need a convenient desk calendar to stay ahead of deadlines, we've got the perfect solution tailored just for you.",
+        CoverDescription: "Always be seen with one of our custom calendars! Whether you want to have wall calendars hung in your office or a compact desk calendar to help you remember your deadlines, we have a solution for you. Always be seen with one of our custom calendars! Whether you want to have wall calendars hung in your office or a compact desk calendar to help you remember your deadlines, we have a solution for you.Always be seen with one of our custom calendars! Whether you want to have wall calendars hung in your office or a compact desk calendar to help you remember your deadlines, we have a solution for you. Elevate your daily routine with our personalized calendars that are designed to keep you on track and make a lasting impression.",
         CoverImage: "/Calenders/Calender-Cover.jpg",
         CoverImageAlt: "Custom Calendar Printing",
         ProductID: "Calender-Products",
@@ -94,7 +92,7 @@ const ServicesMeta = [
     {
         ID: "Cardboard Signs",
         Name: "Cardboard Signs Printing",
-        CoverDescription: "Cardboard signs are a great way to advertise your business. They are portable and can be used both indoors and outdoors. They are made of durable material and are weather resistant. They are easy to set up and take down. They are also easy to store. They are a great way to advertise your business",
+        CoverDescription: "Take your display or indoor project to the next level with custom cardboard sign printing. Spice up your stand at an event, add more points to your point of sale or even create a seating plan for that big conference you've got lined up – whatever you choose to do with them, our cardboard signs are the bees' knees (really!). Discover the art of the print production process with our expert team.Ideal for temporary use, like advertising signs or decoration, these display boards are easy to recycle when you've finished with them, and they're a lot sturdier than a poster! And with our free online cardboard sign maker, you can create a design that's 100% you in a matter of minutes.",
         CoverImage: "/Cardboard-Signs/CardboardSigns-Cover.png",
         CoverImageAlt: "Cardboard Signs Printing",
         ProductID: "CardboardSign-Products",
@@ -103,7 +101,7 @@ const ServicesMeta = [
     {
         ID: "Cards",
         Name: "Cards and Invitations Printing",
-        CoverDescription: "Cards and Invitations are a great way to advertise your business. They are portable and can be used both indoors and outdoors. They are made of durable material and are weather resistant. They are easy to set up and take down. They are also easy to store. They are a great way to advertise your business",
+        CoverDescription: "Sending out personalised greeting cards to your customers, family, and friends is one of the best ways to show people that you care and play an unforgettable role during pivotal moments. Our greetings cards are fully customisable and available in a range of sizes and stock choices, making them perfect for all occasions. No matter the celebration, we've got it covered. From offset printing services to digital printing technology, we offer it all.",
         CoverImage: "/CardsAndInvites/CardsAndInvites-Cover.png",
         CoverImageAlt: "Cards and Invitations Printing",
         ProductID: "CardsAndInvites-Products",
@@ -112,7 +110,7 @@ const ServicesMeta = [
     {
         ID: "Correx",
         Name: "Correx Signs & Boards Printing",
-        CoverDescription: "Correx signs are a great way to advertise your business. They are portable and can be used both indoors and outdoors. They are made of durable material and are weather resistant. They are easy to set up and take down. They are also easy to store. They are a great way to advertise your business",
+        CoverDescription: "Come rain or shine, ensure your messaging is seen in all weathers with our impressive range of Correx® by Corplex signs. These remarkable signs that are expertly printed on recyclable white fluted Correx® by Corplex are sure to grab the attention of everyone who passes. Need to attach your new Correx® by Corplex board to a post? You can print on both sides of your sign to help attract even more people. Are you advertising on the front of your store to entice customers? Our single-sided Correx® by Corplex boards will suit you and your needs. Whether you're artwork details information for your store opening or simple sale promotion, you'll find exactly what you're looking for here at PrintMate.",
         CoverImage: "/Correx/Correx-Cover.png",
         CoverImageAlt: "Correx Signs & Boards Printing",
         ProductID: "Correx-Products",
@@ -126,6 +124,23 @@ const ServicesMeta = [
         CoverImageAlt: "Aluminium Signs Printing",
         ProductID: "AluminiumSign-Products",
         Tags: "From A0 Aluminium Signs to A4 Aluminium Signs, get the right look for your next Aluminium Sign.",
+        FAQS:[
+            {
+                Question: "What Are Aluminium Signs?",
+                Answers: [
+                    "Aluminium signs are made from 0.3mm sheets sandwiched around a polyethene core.",
+                    "They may be lightweight, but they are one of the strongest signage options on the market and can withstand the British weather.",
+                    "Get noticed with our local flyer printing services in the UK."
+                ]
+            },
+            {
+                Question: "What Are the Benefits of Using Aluminium Signs Boards for Business?",
+                Answers: [
+                    "Their rigid, composite nature means they can withstand almost anything. The polyethene centre makes for a thick and sturdy sign without the immense weight that pure aluminium signs would create.", 
+                    "They are visually pleasing and easy to hang, too, meaning that no matter what you're advertising or trying to say to your potential clients, they'll be able to see your messaging in no time."
+                ]
+            }
+        ]   
     },
     {
         ID: "Banners",
