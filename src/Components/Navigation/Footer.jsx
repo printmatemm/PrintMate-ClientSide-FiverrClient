@@ -18,9 +18,9 @@ export default function Footer() {
                     <div className="footer-1">
                         <h3>Get in Touch</h3>
                         <ul>
-                            <li>123, ABC Street, XYZ City</li>
-                            <li>+92 123 456 789</li>
-                            <li>printmate@gmail.com</li>
+                            <li>Tel: 01908 915388</li>
+                            <li>Email: mansoor@printmate.uk</li>
+                            <li>21 Radcliffe Street, Wolverton, Milton Keynes, MK12 5DQ</li>
                         </ul>
                     </div>
                     <div className="footer-1">

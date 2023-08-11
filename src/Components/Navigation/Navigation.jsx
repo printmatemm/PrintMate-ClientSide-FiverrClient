@@ -64,7 +64,7 @@ export default function Navigation() {
             }}>
                 <div className='DropDown'>
                     <div className='DropDown-Item-Box'>
-                        <Link className='D-Link' to="/Product/Canvas">
+                        <Link className='D-Link' to="/All-Products">
                             <h4>View All Products</h4>
                         </Link>
                     </div>
@@ -332,7 +332,9 @@ export default function Navigation() {
                                     {FeaturedDropDown && <Featured></Featured>}
                                 </div>
 
-                                <h6>Contact</h6>
+                                <h6 onClick={()=>{
+                                    Navigate('/aboutus')
+                                }}>Contact</h6>
                             </div>
 
                         </div>
@@ -370,11 +372,11 @@ export default function Navigation() {
                                     <div className='MobMenu'>
                                         <Link className="Link" to="/">Home</Link>
                                         <Divider className='Divider' />
-                                        <Link className="Link" to="/shop/allproducts/">Shop All Products</Link>
+                                        <Link className="Link" to="/all-products/">Shop All Products</Link>
                                         <Divider className='Divider' />
-                                        <Link className="Link" to="/shop/popularproducts">Popular Products</Link>
+                                        <Link className="Link" to="/best-sellers">Popular Products</Link>
                                         <Divider className='Divider' />
-                                        <Link className="Link" to="/shop/featured">Featured Products</Link>
+                                        <Link className="Link" to="/featured-products">Featured Products</Link>
                                         <Divider className='Divider' />
                                         <Link className="Link" to="/aboutus/" >About us</Link>
                                     </div>
