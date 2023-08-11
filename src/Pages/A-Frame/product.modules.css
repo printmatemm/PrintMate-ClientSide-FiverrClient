@@ -7,7 +7,6 @@
     background-attachment: fixed;
     background-color: #d3f3ef;
     width: 100%;
-    
 }
 
 .Showcase {
@@ -525,7 +524,7 @@
 
 @media (max-width:480px){
     .Showcase {
-        width: fit-content;
+        width: 120%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -536,6 +535,7 @@
         border-radius: 5px;
         box-shadow: 0px 2px 23px 0px rgb(0, 0, 0, 0.2);
         height: fit-content;
+        margin-left: -10%;
     }
     .ShowcasePT1 {
         margin: 1rem;
@@ -773,5 +773,13 @@
     .FAQHidden
     {
         display: none;
+    }
+    .AFrameForm-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+        flex-direction: column;
+        margin-bottom: 0.2rem;
     }
 }
