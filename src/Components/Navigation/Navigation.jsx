@@ -388,22 +388,15 @@ export default function Navigation() {
                                                 color: '#ffab00'
                                             }} />
                                             <div className="Navigation-Icons-Text">
-                                                <h4><b>Email Address</b></h4>
-                                                <h4>mansoor@printmate.uk</h4>
+                                                <h6><b>Email Address</b></h6>
+                                                <h6>mansoor@printmate.uk</h6>
                                             </div>
                                         </div>
                                         <div className="Navigation-Icons">
                                             <PhonePausedOutlinedIcon id="Icon" />
                                             <div className="Navigation-Icons-Text">
-                                                <h4><b>Phone Number</b></h4>
-                                                <h5>01908 915388</h5>
-                                            </div>
-                                        </div>
-                                        <div className="Navigation-Icons">
-                                            <BusinessOutlinedIcon id="Icon" />
-                                            <div className="Navigation-Icons-Text">
-                                                <h4><b>Address</b></h4>
-                                                <h5>21 Radcliffe Street, Wolverton, Milton Keynes, MK12 5DQ</h5>
+                                                <h6><b>Phone Number</b></h6>
+                                                <h6>01908 915388</h6>
                                             </div>
                                         </div>
                                     </div>

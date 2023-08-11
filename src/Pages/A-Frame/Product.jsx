@@ -8126,63 +8126,58 @@ const FlyerForm = () => {
             <div className="FormBox">
                 <h5>Choose Paper Weight</h5>
                 <div className='Boxes'>
-                    <div className="FormBox">
-                        <h5>Choose Paper Weight</h5>
-                        <div className='Boxes'>
-                            <label>
-                                <input
-                                    className="text-input"
-                                    type="radio"
-                                    name="PaperWeight"
-                                    value="150gsm"
-                                    checked={options.PaperWeight === '150gsm'}
-                                    onChange={() => handleOptionChange('PaperWeight', '150gsm')}
-                                />
-                                <span className="text-tile">
-                                    <span className="text-label">150 gsm</span>
-                                </span>
-                            </label>
-                            <label>
-                                <input
-                                    className="text-input"
-                                    type="radio"
-                                    name="PaperWeight"
-                                    value="250gsm"
-                                    checked={options.PaperWeight === '250gsm'}
-                                    onChange={() => handleOptionChange('PaperWeight', '250gsm')}
-                                />
-                                <span className="text-tile">
-                                    <span className="text-label">250 gsm</span>
-                                </span>
-                            </label>
-                            <label>
-                                <input
-                                    className="text-input"
-                                    type="radio"
-                                    name="PaperWeight"
-                                    value="350gsm"
-                                    checked={options.PaperWeight === '350gsm'}
-                                    onChange={() => handleOptionChange('PaperWeight', '350gsm')}
-                                />
-                                <span className="text-tile">
-                                    <span className="text-label">350 gsm</span>
-                                </span>
-                            </label>
-                            <label>
-                                <input
-                                    className="text-input"
-                                    type="radio"
-                                    name="PaperWeight"
-                                    value="450gsm"
-                                    checked={options.PaperWeight === '450gsm'}
-                                    onChange={() => handleOptionChange('PaperWeight', '450gsm')}
-                                />
-                                <span className="text-tile">
-                                    <span className="text-label">450 gsm</span>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="150gsm"
+                            checked={options.PaperWeight === '150gsm'}
+                            onChange={() => handleOptionChange('PaperWeight', '150gsm')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">150 gsm</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="250gsm"
+                            checked={options.PaperWeight === '250gsm'}
+                            onChange={() => handleOptionChange('PaperWeight', '250gsm')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">250 gsm</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="350gsm"
+                            checked={options.PaperWeight === '350gsm'}
+                            onChange={() => handleOptionChange('PaperWeight', '350gsm')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">350 gsm</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input
+                            className="text-input"
+                            type="radio"
+                            name="PaperWeight"
+                            value="450gsm"
+                            checked={options.PaperWeight === '450gsm'}
+                            onChange={() => handleOptionChange('PaperWeight', '450gsm')}
+                        />
+                        <span className="text-tile">
+                            <span className="text-label">450 gsm</span>
+                        </span>
+                    </label>
                 </div>
             </div>
             <div className="FormBox">
