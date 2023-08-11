@@ -491,6 +491,27 @@
     background-color: transparent;
     color: #7cd2c7;
 }
+@media (max-width:786px){
+    .ourselves-inner {
+        grid-template-columns: 50% 50% !important;
+        justify-content: left;
+        width: 100%;
+        padding: 1rem;
+    }
+    .grid {
+        grid-template-columns: 50% 50% !important; 
+    }
+    .about-us
+    {
+        grid-template-columns: 100% !important;
+        justify-content: left;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem !important;
+    }
+        
+
+}
 
 
 @media (max-width:480px){

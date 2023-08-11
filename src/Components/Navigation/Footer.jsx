@@ -26,7 +26,6 @@ export default function Footer() {
                     <div className="footer-1">
                         <h3>Want more information?</h3>
                         <p>Request a quotation to get more information.</p>
-                        <button>Get Quote</button>
                         <p><b>Print Excellence, Guaranteed</b></p>
                     </div>
                 </div>

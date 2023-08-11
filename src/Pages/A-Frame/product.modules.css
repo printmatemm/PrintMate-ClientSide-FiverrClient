@@ -508,6 +508,20 @@
     width: 100%;
     font-weight: bold;
 }
+@media (max-width:768px){
+    .Showcase {
+        grid-template-columns: 100%;
+    }
+    .RoadMapImageHolder
+    {
+        display: none;
+    }
+    .FAQHidden
+    {
+        display: none;
+    }
+
+}
 
 @media (max-width:480px){
     .Showcase {

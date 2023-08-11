@@ -231,6 +231,19 @@
     margin-top: 1rem;
     text-align: justify;
 }
+@media (max-width:786px){
+    .AFrameCover
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .AProductsDisplay-Inner
+    {
+        grid-template-columns: 50% 50% !important;
+    }
+}
 
 @media (max-width:480px){
     .AFrameCover
