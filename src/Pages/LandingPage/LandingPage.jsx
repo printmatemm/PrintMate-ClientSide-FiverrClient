@@ -28,9 +28,9 @@ export default function LandingPage() {
                         <p>Unlock Your Professional Potential with Our Exquisite Business Cards!</p>
                         <ul>
                             <li>🌟 Elevate Your Brand Identity 🌟</li>
-                            <li>🎨 Customization at Your Fingertips 🎨</li>
+                            <li>🎨 Choice of Customization 🎨</li>
                             <li>📐 Precision Printing for Perfection 📐</li>
-                            <li>🚀 Fast Turnaround, Seamless Process 🚀</li>
+                            <li>🚀 Fast and Seamless Process 🚀</li>
                             <li>And many more..</li>
                         </ul>
                         <div className='carousel-btn'>
@@ -50,8 +50,8 @@ export default function LandingPage() {
                         <p>Unlock the World of Knowledge with Our Enchanting Books and Booklets!</p>
                         <ul>
                             <li>📘 Transform Ideas into Art 📘</li>
-                            <li>🎨 Customization that Speaks Volumes 🎨</li>
                             <li>📚 Quality Printing for Every Page 📚</li>
+                            <li>🎨 Choice of Customization 🎨</li>
                             <li>📚 Your Words, Our Craftsmanship 📚</li>
                             <li>And many more..</li>
                         </ul>
@@ -71,9 +71,9 @@ export default function LandingPage() {
                         <p>Unleash Your Business's Potential with Our Captivating Banners</p>
                         <ul>
                             <li>🎨 Vibrant Visuals, Bigger Impact 🎨</li>
-                            <li>🔍 Customization for Every Occasion 🔍</li>
                             <li>🌟 Quality that Stands Tall 🌟</li>
-                            <li>🚀 Fast Turnaround, Seamless Process 🚀</li>
+                            <li>🚀 Fast and Seamless Process 🚀</li>
+                            <li>🔍 Occasional Customization 🔍</li>
                             <li>And many more..</li>
                         </ul>
                         <div className='carousel-btn'>
