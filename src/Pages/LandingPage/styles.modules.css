@@ -125,7 +125,7 @@
 
 .Landing-Page-Cover img {
     width: 120%;
-    height: 110vh !important;
+    height: 100vh !important;
     object-fit: cover;
 }
 
