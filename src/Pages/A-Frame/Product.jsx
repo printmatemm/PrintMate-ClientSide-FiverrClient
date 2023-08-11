@@ -504,6 +504,14 @@ export default function () {
 }
 
 const CallAPI = async (body) => {
+    notification.open({
+        message: 'Sending Request',
+        description:
+            'Please Wait, We are sending your request', 
+        icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+        duration: 3
+    })
+
     const Response = await fetch(`${process.env.REACT_APP_API_URL}/addQuotation`,{
         method: 'POST',
         headers: {
@@ -558,6 +566,15 @@ const ValidateForm = (Name, Email, Phone, Address) => {
             icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
         })
         return false;
+    }
+    if (Address==='')
+    {
+        notification.open({
+            message: 'Please Enter Address',
+            description:
+                "Please Enter Address",
+            icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
+        })
     }
     return true;
 
