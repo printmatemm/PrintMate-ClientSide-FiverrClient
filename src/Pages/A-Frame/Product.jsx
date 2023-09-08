@@ -7,18 +7,23 @@ import Footer from '../../Components/Navigation/Footer'
 import DoneAllIcon from '@mui/icons-material/DoneAll';
 import { FormControl } from '@mui/material';
 import { notification } from 'antd'
+import emailjs from "@emailjs/browser";
+import {useNavigate} from 'react-router-dom'
 
 import { Collapse } from 'antd';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function () {
     const Product = useContext(Context).Product;
+    const history = useNavigate()
 
     useEffect(() => {
         if (!Product) {
             window.location.href = "/";
         }
     }, [Product])
+
+    useEffect(() => emailjs.init("4UXhp1ho-2XzxocHz"), []);
 
     const ChangeProductImage = (image, index) => {
         document.getElementById("MainImage").src = image;
@@ -109,15 +114,15 @@ export default function () {
                                     <img src="/ProductCover.png" alt="FAQ" />
                                 </div>
                                 <div className="FAQHidden">
-                                <h4>Frequently Asked Questions</h4>
-                                <Collapse accordion items={items}
-                                    style={{
-                                        backgroundColor: 'white',
-                                        borderRadius: '5px',
-                                        padding: '10px',
-                                        fontFamily: 'Rubik'
+                                    <h4>Frequently Asked Questions</h4>
+                                    <Collapse accordion items={items}
+                                        style={{
+                                            backgroundColor: 'white',
+                                            borderRadius: '5px',
+                                            padding: '10px',
+                                            fontFamily: 'Rubik'
 
-                                    }} />
+                                        }} />
                                 </div>
                             </div>
                         </div>
@@ -178,7 +183,7 @@ export default function () {
 
                             {Product?.Image.includes("Calenders") &&
 
-                            <div className="ShowcasePT2-1">
+                                <div className="ShowcasePT2-1">
                                     {Product?.Description === "Desk Calender" &&
                                         <CalenderForm />
                                     }
@@ -276,7 +281,7 @@ export default function () {
                                         Product?.Description === "Foil Greatings" &&
                                         <ChristmasCardForm />
                                     }
- 
+
                                     {
                                         Product?.Description === "Foil Leaflets" &&
                                         <FoilLeafletForm />
@@ -292,9 +297,9 @@ export default function () {
                                         Product?.Description === "Foil Christmas Cards" &&
                                         <ChristmasCardForm />
                                     }
-                                    </div>
+                                </div>
                             }
-     
+
                             {Product?.Image.includes('Stationary') &&
                                 <div className="ShowcasePT2-1">
                                     {
@@ -316,7 +321,7 @@ export default function () {
                                     {
                                         Product?.Description === "Notepads" &&
                                         <NotepadForm />
-                                    }                               
+                                    }
                                     {
                                         Product?.Description === "Presentation Folders" &&
                                         <FoilFolderForm />
@@ -443,15 +448,15 @@ export default function () {
                                     }
                                     {
                                         Product?.Description === 'Window Clings' &&
-                                        <StickerForm4 />                                        
+                                        <StickerForm4 />
                                     }
                                     {
                                         Product?.Description === 'Vinyl Clings' &&
-                                        <StickerForm4 />                                      
+                                        <StickerForm4 />
                                     }
                                     {
-                                       Product?.Description === 'Sticker Rolls' &&
-                                        <MugForm />                                      
+                                        Product?.Description === 'Sticker Rolls' &&
+                                        <MugForm />
                                     }
                                 </div>
                             }
@@ -461,31 +466,31 @@ export default function () {
                                     {
                                         Product?.Description === "Stapled Booklets" &&
                                         <StapledBookletForm />
-                                    }    
-                                                                        {
+                                    }
+                                    {
                                         Product?.Description === "Perfect Bound Booklets" &&
                                         <StapledBookletForm />
-                                    }    
+                                    }
                                     {
                                         Product?.Description === "Wire Bound Booklets" &&
                                         <StapledBookletForm />
-                                    }    
+                                    }
                                     {
                                         Product?.Description === "Orders of Service" &&
                                         <StapledBookletForm />
-                                    } 
-                                                                          {
+                                    }
+                                    {
                                         Product?.Description === "Notebooks" &&
                                         <NotepadForm />
                                     }
-                                                                        {
+                                    {
                                         Product?.Description === "Notepads" &&
                                         <NotepadForm />
                                     }
                                     {
                                         Product?.Description === "Personalised Diaries" &&
                                         <NotepadForm />
-                                    } 
+                                    }
                                 </div>
                             }
                         </div>
@@ -507,12 +512,12 @@ const CallAPI = async (body) => {
     notification.open({
         message: 'Sending Request',
         description:
-            'Please Wait, We are sending your request', 
+            'Please Wait, We are sending your request',
         icon: <DoneAllIcon style={{ color: '#108ee9' }} />,
         duration: 3
     })
 
-    const Response = await fetch(`${process.env.REACT_APP_API_URL}/addQuotation`,{
+    const Response = await fetch(`${process.env.REACT_APP_API_URL}/addQuotation`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -521,11 +526,44 @@ const CallAPI = async (body) => {
     })
     const ResponseData = await Response.json();
     if (ResponseData.success) {
+        const serviceId = "service_h501omo";
+        const templateId = "template_epta9ma";
         SuccessNotification();
+        setTimeout(function() {
+            window.location.href = "/";
+          }, 2000); 
+                  await emailjs.send(serviceId, templateId, {
+            to_name: "mansoor@printmate.uk",
+            name: body.Name || "N/A",
+            email: body.Email || "N/A",
+            phone: body.Phone || "N/A",
+            address: body.Address || "N/A",
+            delivery: body.Delivery ||"N/A" ,
+            product: body.Product || "N/A",
+            quantity: body.Quantity || "N/A",
+            paperType: body.PaperType || "N/A",
+            paperWeight: body.PaperWeight || "N/A",
+            sides: body.Sides || "N/A",
+            lamination: body.Lamination || "N/A",
+            uVSpot: body.UVSpot || "N/A" ,
+            corner: body.Corner || "N/A",
+            fold: body.Fold || "N/A",
+            sizes: body.Sizes || "N/A",
+            envelope: body.Envelope || "N/A",
+            drillOption: body.DrillOption ||"N/A" ,
+            rollerBannerType: body.RollerBannerType || "N/A",
+            flagType: body.FlagType || "N/A",
+            amountOfPrintedPages: body.AmountOfPrintedPages || "N/A",
+            coverOption: body.CoverOptiont || "N/A",
+            folderType: body.FolderType || "N/A",
+            finishing: body.Finishing || "N/A",
+            menuType: body.MenuType || "N/A"
+          });      
+    }    
+    else 
+    { 
+        ErrorNotification();
     }
-    else ErrorNotification()
-    console.log("Response Data", Response);
-    
 }
 
 const ValidateForm = (Name, Email, Phone, Address) => {
@@ -567,8 +605,7 @@ const ValidateForm = (Name, Email, Phone, Address) => {
         })
         return false;
     }
-    if (Address==='')
-    {
+    if (Address === '') {
         notification.open({
             message: 'Please Enter Address',
             description:
@@ -7302,7 +7339,7 @@ const PVCBannerForm2 = () => {
                 Delivery: options.Delivery,
                 Sizes: options.Sizes,
                 Product: Product?.Description
-                
+
             })
         }
 
@@ -10600,7 +10637,7 @@ const LetterHeadForm = () => {
                 PaperType: options.PaperType,
                 PaperWeight: options.PaperWeight,
                 Sides: options.Sides,
-                Product: Product.Description                
+                Product: Product.Description
             })
         }
     }
@@ -13056,7 +13093,7 @@ const LeafletForm2 = () => {
                     </label>
                     <label>
                         <input
-h                            className="text-input"
+                            h className="text-input"
                             type="radio"
                             name="Sizes"
                             value="A6"
