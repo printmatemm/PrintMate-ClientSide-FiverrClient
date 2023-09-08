@@ -13093,7 +13093,7 @@ const LeafletForm2 = () => {
                     </label>
                     <label>
                         <input
-                            h className="text-input"
+                            className="text-input"
                             type="radio"
                             name="Sizes"
                             value="A6"
