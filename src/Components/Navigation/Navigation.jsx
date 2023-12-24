@@ -137,7 +137,7 @@ export default function Navigation() {
                         </Link>
                     </div>
                     <div className='DropDown-Item'>
-                        <Link className='D-Link' to="/Product/Stickers-and-Label">
+                        <Link className='D-Link' to="/Product/Stickers-and-Labels">
                             <div className="DropDown-Link">
                                 <img src="/Stickers/Stickers-Product1.jpg" alt="Stickers and Labels" width={150} height={150}></img>
                                 <h5>Stickers and Labels</h5>
@@ -284,7 +284,7 @@ export default function Navigation() {
                     <>
                         <div className="Navigation">
                             <div className='container Navigation-Inner'>
-                                <h1 className="Company-Name">Print<span>Mate</span></h1>
+                                <img src="/Logo.png" alt="Logo" width={150} className="Company-Name" height={50}></img>
                                 <div className="Navigation-Icons">
                                     <MailOutlineSharpIcon id="Icon" />
                                     <div className="Navigation-Icons-Text">
@@ -331,10 +331,14 @@ export default function Navigation() {
                                     <h6 onClick={toggleFeaturedDropdwon} onMouseEnter={toggleFeaturedDropdwon}>Featured Products</h6>
                                     {FeaturedDropDown && <Featured></Featured>}
                                 </div>
-
+                                <h6 onClick={()=>{
+                                    //redirect to platenkeys4cars.co.uk in new tab
+                                    window.location.href = 'https://platenkeys4cars.co.uk/'
+                                }}>Order Plates</h6>
                                 <h6 onClick={()=>{
                                     Navigate('/aboutus')
                                 }}>Contact</h6>
+
                             </div>
 
                         </div>
@@ -343,7 +347,7 @@ export default function Navigation() {
                 {(deviceType === 'tablet' || deviceType === "mobile") &&
                     <>
                         <div className="Navigation">
-                            <h1 className="Company-Name">Print<span>Mate</span></h1>
+                            <img src="/Logo.png" alt="Logo" width={170} className="Company-Name" height={60}></img>                            
                             <IconButton onClick={() => setOpen(!open)}>
                                 <MenuIcon className='Menu' />
                             </IconButton>
@@ -377,6 +381,12 @@ export default function Navigation() {
                                         <Link className="Link" to="/best-sellers">Popular Products</Link>
                                         <Divider className='Divider' />
                                         <Link className="Link" to="/featured-products">Featured Products</Link>
+                                        <Divider className='Divider' />
+                                        <p className="Link" onClick={
+                                            ()=>{
+                                                window.location.href = 'https://platenkeys4cars.co.uk/'
+                                            }
+                                        }>Order Plates</p>
                                         <Divider className='Divider' />
                                         <Link className="Link" to="/aboutus/" >About us</Link>
                                     </div>
